@@ -1,0 +1,8 @@
+{
+  "plugins": ["effector"],
+  "extends": [
+    "plugin:effector/recommended",
+    "plugin:effector/scope",
+    "plugin:effector/react"
+  ]
+}

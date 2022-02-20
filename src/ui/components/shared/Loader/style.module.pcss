@@ -1,0 +1,49 @@
+.spinner {
+  height: 60px;
+  font-size: 15px;
+
+  & > div {
+    height: 100%;
+    width: 10px;
+    margin-inline: 2px;
+    display: inline-block;
+    background-color: #fff;
+    animation: spinner 1.2s infinite ease-in-out;
+  }
+
+  .rect2 {
+    animation-delay: -1.1s;
+  }
+
+  .rect3 {
+    animation-delay: -1s;
+  }
+
+  .rect4 {
+    animation-delay: -0.9s;
+  }
+
+  .rect5 {
+    animation-delay: -0.8s;
+  }
+
+  &__holder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+}
+
+@keyframes spinner {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+}
