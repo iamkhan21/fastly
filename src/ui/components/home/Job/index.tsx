@@ -10,9 +10,9 @@ const Job: FC<Props> = ({ uid }) => {
   }, []);
 
   return (
-    <article>
+    <section className="py-2 px-4">
       <p>Job {uid}</p>
-    </article>
+    </section>
   );
 };
 

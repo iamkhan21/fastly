@@ -1,5 +1,29 @@
+@import "open-props/shadows";
 @import "open-props/postcss/normalize";
 
-.glass--morph {
-  backdrop-filter: blur(5px);
+.card {
+  --bgc: var(--surface-2);
+  --bdc: var(--surface-3);
+  --bxs: var(--shadow-3);
+
+  background-color: var(--bgc);
+  border: var(--border-size-1) solid var(--bdc);
+  box-shadow: var(--bxs);
+
+  &--primary {
+    --bgc: var(--surface-1);
+    --bxs: var(--shadow-4);
+  }
+
+  &--left,
+  &--right {
+    border-width: 0;
+  }
+
+  &--left {
+    border-right-width: 1px;
+  }
+  &--right {
+    border-left-width: 1px;
+  }
 }

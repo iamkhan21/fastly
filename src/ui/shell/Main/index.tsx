@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "wouter";
+import { Route, Redirect, Switch } from "wouter";
 
 const Home = React.lazy(() => import("@ui/views/Home"));
 
@@ -8,6 +8,9 @@ const Main = () => {
     <main data-testid="main">
       <React.Suspense fallback={<p>Loading..</p>}>
         <Switch>
+          <Route path="/">
+            <Redirect to="/home" />
+          </Route>
           <Route path="/home" component={Home} />
           <Route path="/home/:uid" component={Home} />
           <Route path="/about">About Us</Route>
