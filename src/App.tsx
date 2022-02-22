@@ -1,14 +1,14 @@
 import Header from "@ui/shell/Header";
 import Main from "@ui/shell/Main";
-import withAuthentication from "@ui/HOCs/withAuthentication";
+import AuthGuard from "@ui/components/shared/AuthGuard";
 
 function App() {
   return (
-    <>
+    <AuthGuard>
       <Header />
       <Main />
-    </>
+    </AuthGuard>
   );
 }
 
-export default withAuthentication(App);
+export default App;

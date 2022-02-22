@@ -5,9 +5,7 @@ interface Props {
 }
 
 const Job: FC<Props> = ({ uid }) => {
-  useEffect(() => {
-    console.log(uid);
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <section className="py-2 px-4">

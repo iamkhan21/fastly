@@ -64,6 +64,5 @@ forward({
 });
 
 $auth
-  .reset(logout)
   .on([signinFx.doneData, checkAuthFx.doneData], (_, user) => user)
   .on([signinFx.fail, checkAuthFx.fail, logoutFx.done], () => getNoUser());

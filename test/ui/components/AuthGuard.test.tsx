@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { getMockedUser, render, screen } from "@test_utils/test-utils";
-import withAuthentication from "@ui/HOCs/withAuthentication";
+import AuthGuard from "@ui/components/shared/AuthGuard";
 import { UserState } from "@application/auth/types";
 import { getNoUser } from "@domain/user";
 import { waitFor } from "@testing-library/react";
@@ -12,9 +12,18 @@ describe("withAuthentication", () => {
   const getTest = () => screen.queryByTestId("test");
   const getAuth = () => screen.queryByTestId("auth");
 
-  const useGateHookMock = function () {};
-  const renderFunc = (useAuthHookMock: () => UserState) =>
-    render(withAuthentication(App, useAuthHookMock, useGateHookMock)());
+  const useGateMock = function () {};
+  const useTitleMock = function (title: string) {};
+  const renderFunc = (useAuthMock: () => UserState) =>
+    render(
+      <AuthGuard
+        useTitleHook={useTitleMock}
+        useAuthHook={useAuthMock}
+        useGateHook={useGateMock}
+      >
+        <App />
+      </AuthGuard>
+    );
 
   it("should show loader when fetching user", () => {
     const useAuthHookMock = () => null;

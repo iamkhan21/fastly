@@ -4,6 +4,7 @@ import path from "node:path";
 import react from "@vitejs/plugin-react";
 import Unocss from "unocss/vite";
 import { presetUno } from "unocss";
+import presetIcons from "@unocss/preset-icons";
 import tsconfig from "./tsconfig.json";
 
 function handlePath(p) {
@@ -30,7 +31,7 @@ export default defineConfig({
         configFile: true,
       },
     }),
-    Unocss({ presets: [presetUno()] }),
+    Unocss({ presets: [presetUno(), presetIcons()] }),
   ],
   test: {
     globals: true,

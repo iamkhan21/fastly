@@ -1,16 +1,13 @@
 import React, { FormEvent, useState } from "react";
-import { signIn } from "@application/auth";
+import { signIn, signinFx } from "@application/auth";
+import { useStore } from "effector-react";
 
-const SigninForm = () => {
-  const [loading, setLoading] = useState(false);
+const SigninForm = ({ useStoreHook = useStore }) => {
+  const loading = useStoreHook(signinFx.pending);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
-    setLoading(true);
     e.preventDefault();
-
-    setTimeout(() => {
-      signIn({ email: "", password: "" });
-    }, 1000);
+    signIn({ email: "", password: "" });
   }
 
   return (

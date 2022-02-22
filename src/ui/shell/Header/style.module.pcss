@@ -1,0 +1,21 @@
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  padding-block: 8px;
+
+  &:hover {
+    background-color: var(--surface-1);
+  }
+  &.active {
+    background-color: var(--surface-4);
+    pointer-events: none;
+  }
+}
+
+.icon {
+  font-size: var(--font-size-fluid-1);
+  color: var(--text-1);
+}

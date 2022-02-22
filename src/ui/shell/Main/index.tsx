@@ -1,7 +1,10 @@
 import React from "react";
-import { Route, Redirect, Switch } from "wouter";
+import { Redirect, Route, Switch } from "wouter";
 
 const Home = React.lazy(() => import("@ui/views/Home"));
+const Users = React.lazy(() => import("@ui/views/Users"));
+const Finance = React.lazy(() => import("@ui/views/Finance"));
+const NotFound = React.lazy(() => import("@ui/views/NotFound"));
 
 const Main = () => {
   return (
@@ -13,10 +16,9 @@ const Main = () => {
           </Route>
           <Route path="/home" component={Home} />
           <Route path="/home/:uid" component={Home} />
-          <Route path="/about">About Us</Route>
-          <Route path="/users/:name">
-            {(params) => <div>Hello, {params.name}!</div>}
-          </Route>
+          <Route path="/users" component={Users} />
+          <Route path="/finance" component={Finance} />
+          <Route component={NotFound} />
         </Switch>
       </React.Suspense>
     </main>
