@@ -2,7 +2,7 @@ import React from "react";
 
 const NotFound = () => {
   return (
-    <article className="flex items-center justify-center py-15 px-3">
+    <article className="content flex items-center justify-center py-15">
       <h2>404, Not Found!</h2>
     </article>
   );

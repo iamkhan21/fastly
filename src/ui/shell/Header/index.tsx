@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Link, useRoute } from "wouter";
+import { Link, useLocation } from "wouter";
 import Menu from "@ui/shell/Header/Menu";
 import style from "./style.module.pcss";
 
@@ -8,9 +8,9 @@ interface Props {
 }
 
 const ActiveLink: FC<Props> = ({ children, ...props }) => {
-  const [isActive] = useRoute(props.href);
+  const [location] = useLocation();
 
-  const active = isActive ? style.active : "";
+  const active = location.includes(props.href) ? style.active : "";
   return (
     <Link {...props}>
       <a className={`${style.link} ${active}`}>{children}</a>

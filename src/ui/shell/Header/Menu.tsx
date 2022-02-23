@@ -1,22 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { logout } from "@application/auth";
+import { animate } from "motion";
 
 const Menu = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const state = useRef(false);
 
   useEffect(() => {
     function listenCLickOutside(event: MouseEvent) {
-      if ((event.target as HTMLElement)?.closest("#menu")) return;
-      setShowMenu(false);
+      const isMenuClick = (event.target as HTMLElement)?.closest("#menu");
+      const isButtonClick = (event.target as HTMLElement)?.closest("#menu-btn");
+      if (isMenuClick || isButtonClick) return;
+      state.current && toggleMenu();
     }
 
-    showMenu &&
-      document.addEventListener("click", listenCLickOutside, { once: true });
+    document.addEventListener("click", listenCLickOutside);
 
     return () => {
       document.removeEventListener("click", listenCLickOutside);
     };
-  }, [showMenu]);
+  }, []);
+
+  function toggleMenu() {
+    const selector = "#menu";
+    const duration = 0.1;
+
+    if (state.current) {
+      animate(
+        selector,
+        { transform: "scale(0)" },
+        { duration, easing: "ease-in" }
+      );
+    } else {
+      animate(
+        selector,
+        { transform: "scale(1)" },
+        { duration, easing: "ease-out" }
+      );
+    }
+
+    state.current = !state.current;
+  }
 
   return (
     <>
@@ -24,22 +47,20 @@ const Menu = () => {
         id="menu-btn"
         type="button"
         className="m-2 mt-auto p-1"
-        onClick={() => setShowMenu(!showMenu)}
+        onClick={toggleMenu}
       >
-        {/*onClick={() => logout()}*/}
         <div className="i-mdi-settings text-xl" />
       </button>
-      {showMenu && (
-        <section
-          id="menu"
-          className="absolute bottom-10 left-10 card card--primary p-2 min-w-60 rounded"
-        >
-          <h4 className="mb-2">Menu</h4>
-          <nav>
-            <button onClick={() => logout()}>Logout</button>
-          </nav>
-        </section>
-      )}
+      <section
+        id="menu"
+        className="absolute bottom-10 left-10 card card--primary p-2 min-w-60 rounded origin-bottom-left will-change-transform"
+        style={{ transform: "scale(0)" }}
+      >
+        <h4 className="mb-2">Menu</h4>
+        <nav>
+          <button onClick={() => logout()}>Logout</button>
+        </nav>
+      </section>
     </>
   );
 };

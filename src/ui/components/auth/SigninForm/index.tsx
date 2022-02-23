@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent } from "react";
 import { signIn, signinFx } from "@application/auth";
 import { useStore } from "effector-react";
 

@@ -7,7 +7,7 @@ specifiers:
   '@testing-library/react-hooks': 7.0.2
   '@testing-library/user-event': 13.5.0
   '@types/mapbox-gl': 2.6.1
-  '@types/node': 17.0.19
+  '@types/node': 17.0.20
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
   '@unocss/preset-icons': 0.26.2
@@ -22,6 +22,7 @@ specifiers:
   idb-keyval: 6.1.0
   jsdom: 19.0.0
   mapbox-gl: 2.7.0
+  motion: 10.6.2
   open-props: 1.3.8
   postcss: 8.4.6
   postcss-import: 14.0.2
@@ -35,7 +36,7 @@ specifiers:
   typescript: 4.5.5
   unocss: 0.26.2
   vite: 2.8.4
-  vitest: 0.5.1
+  vitest: 0.5.3
   wouter: 2.8.0-alpha.2
   wretch: 1.7.9
   wretch-middlewares: 0.1.13
@@ -46,6 +47,7 @@ dependencies:
   effector-react: 22.0.6_effector@22.2.0+react@17.0.2
   idb-keyval: 6.1.0
   mapbox-gl: 2.7.0
+  motion: 10.6.2_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   wouter: 2.8.0-alpha.2_react@17.0.2
@@ -59,7 +61,7 @@ devDependencies:
   '@testing-library/react-hooks': 7.0.2_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.5.0
   '@types/mapbox-gl': 2.6.1
-  '@types/node': 17.0.19
+  '@types/node': 17.0.20
   '@types/react': 17.0.39
   '@types/react-dom': 17.0.11
   '@unocss/preset-icons': 0.26.2
@@ -80,7 +82,7 @@ devDependencies:
   typescript: 4.5.5
   unocss: 0.26.2_c8@7.11.0+jsdom@19.0.0
   vite: 2.8.4
-  vitest: 0.5.1_c8@7.11.0+jsdom@19.0.0
+  vitest: 0.5.3_c8@7.11.0+jsdom@19.0.0
 
 packages:
 
@@ -583,6 +585,86 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: false
 
+  /@motionone/animation/10.6.2:
+    resolution: {integrity: sha512-LOq9SYwNSEg1aSM16a1HlQPIxEC+XTIq3+DwjXKH+ORHCmhULSmdWhjOr+7Yn1Up4fejbJgdW04nGnPuMsnjYA==}
+    dependencies:
+      '@motionone/easing': 10.6.2
+      '@motionone/types': 10.6.2
+      '@motionone/utils': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/dom/10.6.2:
+    resolution: {integrity: sha512-AjYDuHIY9LfN7BARJ9bHZOjACh0Vkqc8Mhohud4VBDg6vAx/FnS1dh8WhMW9kS15Kd6DU1wKl5Qt65md2hAU8g==}
+    dependencies:
+      '@motionone/animation': 10.6.2
+      '@motionone/easing': 10.6.2
+      '@motionone/generators': 10.6.2
+      '@motionone/types': 10.6.2
+      '@motionone/utils': 10.6.2
+      hey-listen: 1.0.8
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/easing/10.6.2:
+    resolution: {integrity: sha512-zzagQP2pu7lNcKOX1HQA+w4mb47ETsyxqXOQf7572QnlGc6pQTCuUZmRIhwKjqn5VMA1kuS6XIY66KGF1284Ow==}
+    dependencies:
+      '@motionone/utils': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/generators/10.6.2:
+    resolution: {integrity: sha512-PofvpII7izwoxpJbwEpKBttRw943AogMBsGEXfxbD7WM7qCDbL0hBpiuxVgGqi9PtRG/AhNqD1M0HcTz8TePlQ==}
+    dependencies:
+      '@motionone/types': 10.6.2
+      '@motionone/utils': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/react/10.6.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-LsCoyvsZhK8+gpxmOs1RESApB+M0t3KSraRE0HiHAO0AMBI3NNeSXWBF3Hz2OyRSMa75cL7evnWsofrN3ilDBA==}
+    peerDependencies:
+      react: ^17.0.2
+      react-dom: ^17.0.2
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+    dependencies:
+      '@motionone/dom': 10.6.2
+      hey-listen: 1.0.8
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/svelte/10.6.2:
+    resolution: {integrity: sha512-WFnjXHf43P4w8dEFrd8m0wxs3kRr/dZCVLXDbC+eejaRxJCEyeaJDNzGkWyGxDMXST897rQNoDy5p5WDsszW2A==}
+    dependencies:
+      '@motionone/dom': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/types/10.6.2:
+    resolution: {integrity: sha512-7YH5OGOhFN2fhxAc2L4i5LFQ/GqliiDt8DvN6htGXEMAleq1o0CVHlHdXyLG9l9eBM1NHlU75BjK3eLouSSFzA==}
+    dev: false
+
+  /@motionone/utils/10.6.2:
+    resolution: {integrity: sha512-zy0pLX7aaDfKoO8nKZbjFGjjZpXNmWo3ae9S/WzoQ2U7a7/ePLa9gSzFDefm2553FtLTaaYecnSf1FH2BTVaww==}
+    dependencies:
+      '@motionone/types': 10.6.2
+      hey-listen: 1.0.8
+      tslib: 2.3.1
+    dev: false
+
+  /@motionone/vue/10.6.2:
+    resolution: {integrity: sha512-pwhV9n4WV/w86Rqzou88pfWIv6Andgib3HJP+/LcWdjNcc2rFyJ9g9wpT9MDS7QO3ouXl6xXljTD5FBXN60/3g==}
+    dependencies:
+      '@motionone/dom': 10.6.2
+      tslib: 2.3.1
+    dev: false
+
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -730,8 +812,8 @@ packages:
       '@types/geojson': 7946.0.8
     dev: true
 
-  /@types/node/17.0.19:
-    resolution: {integrity: sha512-PfeQhvcMR4cPFVuYfBN4ifG7p9c+Dlh3yUZR6k+5yQK7wX3gDgVxBly4/WkBRs9x4dmcy1TVl08SY67wwtEvmA==}
+  /@types/node/17.0.20:
+    resolution: {integrity: sha512-Q15Clj3lZSLnhVA6yKw1G7SQz46DeL9gO1TEgfK1OQGvMdQ6TUWmCeWf1QBUNkw2BDfV52i2YuYd9OF3ZwGhjw==}
     dev: true
 
   /@types/prop-types/15.7.4:
@@ -2035,6 +2117,10 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /hey-listen/1.0.8:
+    resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
+    dev: false
+
   /html-encoding-sniffer/3.0.0:
     resolution: {integrity: sha512-oWv4T4yJ52iKrufjnyZPkrN0CH3QnrUqdB6In1g5Fe1mia8GmF36gnfNySxoZtxD5+NmYw1EElVXiBk93UeskA==}
     engines: {node: '>=12'}
@@ -2450,6 +2536,19 @@ packages:
 
   /minimist/1.2.5:
     resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
+
+  /motion/10.6.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-xvmWg7GlcNZwcddenQ25uqmlIsSWwFKS1C7EDpwQB1hjeJf2zFsdzM0CPSzZ+eC0qh3RXgRv7R6r4AthZiv4Qg==}
+    dependencies:
+      '@motionone/animation': 10.6.2
+      '@motionone/dom': 10.6.2
+      '@motionone/react': 10.6.2_react-dom@17.0.2+react@17.0.2
+      '@motionone/svelte': 10.6.2
+      '@motionone/vue': 10.6.2
+    transitivePeerDependencies:
+      - react
+      - react-dom
+    dev: false
 
   /mrmime/1.0.0:
     resolution: {integrity: sha512-a70zx7zFfVO7XpnQ2IX1Myh9yY4UYvfld/dikWRnsXxbyvMcfz+u6UfgNAtH+k2QqtJuzVpv6eLTx1G2+WKZbQ==}
@@ -3405,6 +3504,10 @@ packages:
       punycode: 2.1.1
     dev: true
 
+  /tslib/2.3.1:
+    resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
+    dev: false
+
   /type-check/0.3.2:
     resolution: {integrity: sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=}
     engines: {node: '>= 0.8.0'}
@@ -3571,8 +3674,8 @@ packages:
       - stylus
     dev: true
 
-  /vitest/0.5.1_c8@7.11.0+jsdom@19.0.0:
-    resolution: {integrity: sha512-s1iP3QYf4J7pHmOd2rRRrG+06XX6uBXmnqqbhyd7cZUj+pmR4gwbF8K1+V6I2SqM4/jRBbcxJMt6xoNjgD2I1Q==}
+  /vitest/0.5.3_c8@7.11.0+jsdom@19.0.0:
+    resolution: {integrity: sha512-tAV96lEUvycgiqsQKoQRjzXwDg+ae/R2jBLtt6MnFywOXbC9wYl+nRT9qT+d/+Mlw2B4dvVa9zuekY3emdcXJA==}
     engines: {node: '>=14.14.0'}
     hasBin: true
     peerDependencies:

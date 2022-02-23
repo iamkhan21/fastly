@@ -14,8 +14,7 @@ const Main = () => {
           <Route path="/">
             <Redirect to="/home" />
           </Route>
-          <Route path="/home" component={Home} />
-          <Route path="/home/:uid" component={Home} />
+          <Route path="/home/:uid*" component={Home} />
           <Route path="/users" component={Users} />
           <Route path="/finance" component={Finance} />
           <Route component={NotFound} />
