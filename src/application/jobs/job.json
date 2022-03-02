@@ -1,0 +1,176 @@
+{
+  "caseDTO": {
+    "id": "84200"
+  },
+  "service": {
+    "id": "121e881c-9252-471a-b195-1d1d9ac64a1e",
+    "number": 148808,
+    "status": 8,
+    "statusDescription": "Completed By Provider",
+    "name": "Towing",
+    "serviceId": 2001,
+    "serviceType": "TOW",
+    "created": 1645737256000,
+    "expires": 1645740859000,
+    "completeTimestamp": 1645737635000,
+    "demo": false,
+    "partnerName": "Safeco",
+    "description": "I need a tow",
+    "type": "RSA_ON_DEMAND",
+    "dispatchOnHold": false,
+    "contactPhoneNumber": "7203250514",
+    "contactPhoneNumberCell": true,
+    "rateCard": "BRONZE",
+    "contactName": "CALVIN MALLARD",
+    "campaign": "safeco-ivr",
+    "roundTrip": false,
+    "reuniteTowRequired": false
+  },
+  "personalInfo": {
+    "name": "CALVIN MALLARD",
+    "phone": "7203250514",
+    "phoneCode": 1,
+    "language": "en",
+    "textOptIn": true,
+    "id": "1e0ed02a-f110-11e7-af9f-12f3cfbdb9a0",
+    "enabled": false
+  },
+  "location": {
+    "street": "5420 Bevis Avenue",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zipCode": "91411",
+    "longitude": -118.45626664124755,
+    "latitude": 34.169236493656555,
+    "address": "5420 Bevis Ave, Sherman Oaks, CA 91411, USA Los Angeles California",
+    "impoundFacility": false,
+    "country": "US",
+    "zip": "91411"
+  },
+  "dropOffLocation": {
+    "street": "6530 VAN NUYS BLVD",
+    "city": "VAN NUYS",
+    "state": "CA",
+    "longitude": -118.44872,
+    "latitude": 34.189416,
+    "address": "6530 VAN NUYS BLVD, CA",
+    "impoundFacility": false
+  },
+  "vehicle": {
+    "make": "ACUR",
+    "model": "MDX SPORT",
+    "color": "Black",
+    "year": "2008",
+    "id": "34955e0a-f111-11e7-af9f-12f3cfbdb9a0",
+    "vehicleClass": "LIGHT",
+    "vin": "2HNYD28878H547426"
+  },
+  "provider": {
+    "providerId": 25,
+    "providerUid": "ac2a1f69-3bff-11e7-9fff-12abd01c05b6",
+    "distance": -1.0,
+    "truckType": "Flat Bed",
+    "firstName": "ABCTest",
+    "lastName": "ABCTest",
+    "phoneNumber": "3445456476",
+    "latitude": 38.7120292,
+    "longitude": -117.071989,
+    "currency": "USD",
+    "eta": {},
+    "status": 1204,
+    "networkName": "Urgent.ly",
+    "costs": [
+      {
+        "type": "BASE",
+        "price": 39.0,
+        "providerPaymentCreated": true,
+        "hookPrice": 39.0,
+        "pricePerMile": 3.1,
+        "freeMiles": 10
+      }
+    ],
+    "driverId": "b461805c-9512-4ed4-b542-ea2f683c0e41",
+    "validProviderDetails": false,
+    "driverDTO": {
+      "uid": "580f4d66-ba13-4d45-95c9-9e46b577c661",
+      "firstName": "ABCTest",
+      "lastName": "ABCTest",
+      "actionId": 0
+    },
+    "truckDTO": {
+      "uKey": "b461805c-9512-4ed4-b542-ea2f683c0e41",
+      "offeredAt": 1645737341000,
+      "truckType": "Flat Bed"
+    },
+    "interested": false
+  },
+  "internalInfo": {},
+  "driverDTO": {
+    "actionId": 0,
+    "offeredAt": 1645737341000,
+    "offerExpires": 1645842390658,
+    "latitude": 38.7120292,
+    "longitude": -117.071989
+  },
+  "stepDTO": {
+    "preInspectionVideoRequired": false,
+    "preInspectionSignatureRequired": true,
+    "postInspectionVideoRequired": false,
+    "postInspectionSignatureRequired": true,
+    "providerLeftSiteStatusRequired": false,
+    "jobMetricResponseRequired": false,
+    "preInspectionRequired": false,
+    "postInspectionRequired": true,
+    "postInspectionType": "PHOTO",
+    "preServiceDocketFormRequired": false,
+    "postServiceDocketFormRequired": false,
+    "preServiceIndemnityFormRequired": false,
+    "postServiceIndemnityFormRequired": false,
+    "preInspectionSkipRequired": true,
+    "postInspectionSkipRequired": true,
+    "skatesRequired": false,
+    "considerDriverDocuments": false,
+    "addAdditionalCostEnabled": false,
+    "addAdditionalCostDocumentUploadCount": 0,
+    "postInspectionPhotoCount": 4
+  },
+  "unreadMessageCount": 0,
+  "countryCode": 1,
+  "errors": {},
+  "declineReasons": [],
+  "communicationChannel": {
+    "customerEndPoint": {
+      "endPoint": "7203250514"
+    },
+    "driverEndPoint": {
+      "endPoint": "3445456476"
+    }
+  },
+  "dispatchCommunicationChannel": {
+    "customerEndPoint": {
+      "endPoint": "7203250514"
+    }
+  },
+  "step": {
+    "preInspectionVideoRequired": false,
+    "preInspectionSignatureRequired": true,
+    "postInspectionVideoRequired": false,
+    "postInspectionSignatureRequired": true,
+    "providerLeftSiteStatusRequired": false,
+    "jobMetricResponseRequired": false,
+    "preInspectionRequired": false,
+    "postInspectionRequired": true,
+    "postInspectionType": "PHOTO",
+    "preServiceDocketFormRequired": false,
+    "postServiceDocketFormRequired": false,
+    "preServiceIndemnityFormRequired": false,
+    "postServiceIndemnityFormRequired": false,
+    "preInspectionSkipRequired": true,
+    "postInspectionSkipRequired": true,
+    "skatesRequired": false,
+    "considerDriverDocuments": false,
+    "addAdditionalCostEnabled": false,
+    "addAdditionalCostDocumentUploadCount": 0,
+    "postInspectionPhotoCount": 4
+  }
+}

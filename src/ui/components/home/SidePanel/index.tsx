@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useRoute } from "wouter";
 import { animate } from "motion";
+import { $selectedJob, loadJobDetails } from "@application/jobs";
+import { useStore } from "effector-react";
 
-const Job = React.lazy(() => import("../Job"));
+const JobInfo = React.lazy(() => import("../JobInfo"));
 
 const SidePanel = () => {
   const isOpen = useRef(false);
@@ -31,19 +33,26 @@ const SidePanel = () => {
     }
   }, [match]);
 
+  useEffect(() => {
+    if (params?.uid) {
+      loadJobDetails(params.uid);
+    }
+  }, [params?.uid]);
+
   return (
     <aside
       id={"side-panel"}
       className="fixed top-0 right-0 bottom-0 card card--primary card--right w-md ml-auto z-1 will-change-transform translate-x-full"
     >
-      {params?.uid && (
-        <React.Suspense fallback={<p>Loading</p>}>
-          <Job {...params} />
-        </React.Suspense>
-      )}
       <Link href={"/home"}>
         <button>close</button>
       </Link>
+      <hr />
+      {params?.uid && (
+        <React.Suspense fallback={<p>Loading</p>}>
+          <JobInfo {...params} />
+        </React.Suspense>
+      )}
     </aside>
   );
 };

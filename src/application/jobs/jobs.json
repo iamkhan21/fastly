@@ -1,0 +1,1023 @@
+[
+  {
+    "caseDTO": {
+      "id": "84301"
+    },
+    "service": {
+      "number": 148927,
+      "status": 21,
+      "name": "Jump Start",
+      "serviceId": 2003,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "Urgently",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "GOLD",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Dev test",
+      "firstName": "Dev test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "WA",
+      "longitude": -122.3831408,
+      "latitude": 47.5396397,
+      "address": "4004 SW Myrtle St, Seattle, WA 98136, USA",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "Audi",
+      "model": "100",
+      "color": "Black"
+    },
+    "provider": {
+      "firstName": "ABCTest, ABCTest",
+      "networkName": "Auto Assign Preferred Providers Network",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "84200"
+    },
+    "service": {
+      "number": 148808,
+      "status": 8,
+      "name": "Towing",
+      "serviceId": 2001,
+      "serviceType": "TOW",
+      "demo": false,
+      "partnerName": "Safeco",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "CALVIN MALLARD",
+      "firstName": "CALVIN MALLARD",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Los Angeles",
+      "state": "CA",
+      "longitude": -118.45626664124755,
+      "latitude": 34.169236493656555,
+      "address": "5420 Bevis Ave, Sherman Oaks, CA 91411, USA Los Angeles California",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "ACUR",
+      "model": "MDX SPORT",
+      "color": "Black",
+      "year": "2008"
+    },
+    "provider": {
+      "firstName": "ABCTest, ABCTest",
+      "estimatedDuration": "34.0",
+      "status": 1101,
+      "networkName": "Urgent.ly",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "84188"
+    },
+    "service": {
+      "number": 148783,
+      "status": 21,
+      "name": "Towing",
+      "serviceId": 2001,
+      "serviceType": "TOW",
+      "demo": false,
+      "partnerName": "Volvo",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "SILVER",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Jordan Smith",
+      "firstName": "Jordan Smith",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Falls Church",
+      "state": "VA",
+      "longitude": -77.1488309,
+      "latitude": 38.8583263,
+      "address": "3245 Rio Dr, Falls Church, VA 22041, USA Virginia",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "Volvo",
+      "model": "XC70",
+      "year": "2015"
+    },
+    "provider": {
+      "firstName": "Sunil, Driver",
+      "estimatedDuration": "20.0",
+      "networkName": "Urgent.ly",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "84186"
+    },
+    "service": {
+      "number": 148781,
+      "status": 21,
+      "name": "Jump Start",
+      "serviceId": 2003,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "Volvo",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Jordan Smith",
+      "firstName": "Jordan Smith",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Falls Church",
+      "state": "VA",
+      "longitude": -77.1488309,
+      "latitude": 38.8583263,
+      "address": "3245 Rio Dr, Falls Church, VA 22041, USA Virginia",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "Volvo",
+      "model": "XC70",
+      "year": "2015"
+    },
+    "provider": {
+      "firstName": "PK, Driver",
+      "estimatedDuration": "20.0",
+      "networkName": "Urgent.ly",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "84170"
+    },
+    "service": {
+      "number": 148765,
+      "status": 21,
+      "name": "Towing",
+      "serviceId": 2001,
+      "serviceType": "TOW",
+      "demo": false,
+      "partnerName": "Volvo",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "SILVER",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Jordan Smith",
+      "firstName": "Jordan Smith",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Falls Church",
+      "state": "VA",
+      "longitude": -77.1488309,
+      "latitude": 38.8583263,
+      "address": "3245 Rio Dr, Falls Church, VA 22041, USA Virginia",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "Volvo",
+      "model": "XC70",
+      "year": "2015"
+    },
+    "provider": {
+      "firstName": "Ujjaval, JaniNew",
+      "estimatedDuration": "20.0",
+      "networkName": "Urgent.ly",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "84169"
+    },
+    "service": {
+      "number": 148764,
+      "status": 21,
+      "name": "Towing",
+      "serviceId": 2001,
+      "serviceType": "TOW",
+      "demo": false,
+      "partnerName": "Volvo",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "SILVER",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Jordan Smith",
+      "firstName": "Jordan Smith",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Falls Church",
+      "state": "VA",
+      "longitude": -77.2007462,
+      "latitude": 38.8578939,
+      "address": "3248 Nealon Dr, Falls Church, VA 22042, USA Virginia",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "Volvo",
+      "model": "XC70",
+      "year": "2015"
+    },
+    "provider": {
+      "firstName": "test, urgent",
+      "estimatedDuration": "20.0",
+      "status": 1210,
+      "networkName": "Urgent.ly",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "84092"
+    },
+    "service": {
+      "number": 148668,
+      "status": 8,
+      "name": "Fuel",
+      "serviceId": 2004,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "Urgently",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "GOLD",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Dev test",
+      "firstName": "Dev test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Seattle",
+      "state": "WA",
+      "longitude": -122.3831408,
+      "latitude": 47.5396397,
+      "address": "4004 SW Myrtle St, Seattle, WA 98136, USA",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "Audi",
+      "model": "100",
+      "color": "Black"
+    },
+    "provider": {
+      "firstName": "Ranjith, Kumar",
+      "estimatedDuration": "45.0",
+      "networkName": "Auto Assign Preferred Providers Network",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "84077"
+    },
+    "service": {
+      "number": 148653,
+      "status": 21,
+      "name": "Tire Install",
+      "serviceId": 2009,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "GOLD",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "test test",
+      "firstName": "test test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Vienna",
+      "state": "VA",
+      "longitude": -77.2464425,
+      "latitude": 38.9279894,
+      "address": "8609 Westwood Center Dr, Vienna, VA 22182, USA",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "150.0",
+      "status": 1102,
+      "networkName": "BMW Network",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83986"
+    },
+    "service": {
+      "number": 148541,
+      "status": 21,
+      "name": "Towing",
+      "serviceId": 2001,
+      "serviceType": "TOW",
+      "demo": false,
+      "partnerName": "Urgently",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "GOLD",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Ankur Test",
+      "firstName": "Ankur Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "CA",
+      "longitude": -117.2287442,
+      "latitude": 32.8663899,
+      "address": "7474 Charmant Dr, San Diego, CA 92122, USA",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "Toyota",
+      "model": "Cami",
+      "color": "Beige",
+      "year": "2023"
+    },
+    "provider": {
+      "firstName": "QA, Automation",
+      "networkName": "Auto Assign Preferred Providers Network",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83893"
+    },
+    "service": {
+      "number": 148400,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "58.0",
+      "status": 1102,
+      "networkName": "BMW Group ServiceMobile",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83893"
+    },
+    "service": {
+      "number": 148398,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "42.0",
+      "networkName": "BMW Tier 1 Network",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83893"
+    },
+    "service": {
+      "number": 148397,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "50.0",
+      "status": 1102,
+      "networkName": "BMW Network",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83885"
+    },
+    "service": {
+      "number": 148392,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "10.0",
+      "status": 1102,
+      "networkName": "BMW Group ServiceMobile",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83885"
+    },
+    "service": {
+      "number": 148391,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "50.0",
+      "status": 1102,
+      "networkName": "BMW Group ServiceMobile",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83885"
+    },
+    "service": {
+      "number": 148390,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "12.0",
+      "status": 1102,
+      "networkName": "BMW Group ServiceMobile",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83885"
+    },
+    "service": {
+      "number": 148386,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "25.0",
+      "status": 1102,
+      "networkName": "BMW Group ServiceMobile",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83885"
+    },
+    "service": {
+      "number": 148384,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "10.0",
+      "status": 1102,
+      "networkName": "BMW Group ServiceMobile",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83885"
+    },
+    "service": {
+      "number": 148372,
+      "status": 8,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "BMW",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "Test Test",
+      "firstName": "Test Test",
+      "textOptIn": true,
+      "enabled": false
+    },
+    "location": {
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "535i",
+      "year": "2012"
+    },
+    "provider": {
+      "firstName": "John, Galt",
+      "estimatedDuration": "50.0",
+      "status": 1102,
+      "networkName": "BMW Group ServiceMobile",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83735"
+    },
+    "service": {
+      "number": 148154,
+      "status": 21,
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "demo": false,
+      "partnerName": "Volvo",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "BRONZE",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "vehicle": {
+      "make": "Volvo",
+      "model": "XC70",
+      "year": "2015"
+    },
+    "provider": {
+      "firstName": "raj, p",
+      "estimatedDuration": "33.0",
+      "networkName": "Urgent.ly",
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  },
+  {
+    "caseDTO": {
+      "id": "83699"
+    },
+    "service": {
+      "number": 148115,
+      "status": 21,
+      "name": "Towing",
+      "serviceId": 2001,
+      "serviceType": "TOW",
+      "demo": false,
+      "partnerName": "Urgently",
+      "alertLevel": 0,
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "rateCard": "GOLD",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "vehicle": {
+      "make": "Austin",
+      "model": "Montego",
+      "color": "Beige",
+      "year": "2021"
+    },
+    "provider": {
+      "costs": [],
+      "validProviderDetails": false,
+      "communicationPlatformCodes": ["urgently"],
+      "interested": false
+    },
+    "unreadMessageCount": 0,
+    "vipTagDTOS": [],
+    "errors": {},
+    "alerts": []
+  }
+]

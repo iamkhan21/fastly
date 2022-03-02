@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "caseDTO": {
+        "id": "84092"
+      },
+      "service": {
+        "number": 148668,
+        "status": 3,
+        "name": "Fuel",
+        "serviceId": 2004,
+        "serviceType": "RSA",
+        "demo": false,
+        "partnerName": "Urgently",
+        "alertLevel": 100,
+        "type": "RSA_ON_DEMAND",
+        "dispatchOnHold": false,
+        "rateCard": "GOLD",
+        "roundTrip": false,
+        "reuniteTowRequired": false
+      },
+      "personalInfo": {
+        "name": "Dev test",
+        "firstName": "Dev test",
+        "textOptIn": true,
+        "enabled": false
+      },
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "longitude": -122.3831408,
+        "latitude": 47.5396397,
+        "address": "4004 SW Myrtle St, Seattle, WA 98136, USA",
+        "impoundFacility": false
+      },
+      "vehicle": {
+        "make": "Audi",
+        "model": "100",
+        "color": "Black"
+      },
+      "provider": {
+        "firstName": "Ranjith, Kumar",
+        "estimatedDuration": "45.0",
+        "networkName": "Auto Assign Preferred Providers Network",
+        "costs": [],
+        "validProviderDetails": false,
+        "communicationPlatformCodes": ["urgently"],
+        "interested": false
+      },
+      "unreadMessageCount": 0,
+      "vipTagDTOS": [],
+      "errors": {},
+      "alerts": [
+        {
+          "id": 582411,
+          "alertTypeDescription": "Driver not on the way",
+          "alertTypeId": 52,
+          "severity": 100,
+          "createdAt": 1645637422000,
+          "csrUid": "1285276b-e657-11e8-af9f-12f3cfbdb9a0",
+          "alertAction": "Please update driver status",
+          "status": "OPEN",
+          "jobNumber": 148668,
+          "numberOfTries": 0,
+          "companyId": 25,
+          "sendIntervalInSeconds": 30,
+          "priority": 100,
+          "alertCount": 0,
+          "caseId": 84092,
+          "createdAtTimeStamp": 1645637422000
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "offset": 0,
+    "limit": 20,
+    "totalPages": 1,
+    "totalElements": 1
+  }
+}

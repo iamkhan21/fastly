@@ -21,7 +21,7 @@ const ActiveLink: FC<Props> = ({ children, ...props }) => {
 const Header = () => {
   return (
     <header
-      className="relative card card--left w-12 flex flex-col items-stretch z-1"
+      className="relative card card--left w-12 flex flex-col items-stretch z-5"
       data-testid="header"
     >
       <h2 className="m-0 mb-5 text-center">F</h2>
