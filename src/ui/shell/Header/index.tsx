@@ -5,15 +5,18 @@ import style from "./style.module.pcss";
 
 interface Props {
   href: string;
+  title?: string;
 }
 
-const ActiveLink: FC<Props> = ({ children, ...props }) => {
+const ActiveLink: FC<Props> = ({ children, title, ...props }) => {
   const [location] = useLocation();
 
   const active = location.includes(props.href) ? style.active : "";
   return (
     <Link {...props}>
-      <a className={`${style.link} ${active}`}>{children}</a>
+      <a className={`${style.link} ${active}`} title={title}>
+        {children}
+      </a>
     </Link>
   );
 };
@@ -27,14 +30,14 @@ const Header = () => {
       <h2 className="m-0 mb-5 text-center">F</h2>
 
       <nav className="flex flex-col space-y-3">
-        <ActiveLink href="/home">
-          <i className={`${style.icon} i-mdi-headset-mic`} />
+        <ActiveLink href="/home" title="Dispatches">
+          <i className={`${style.icon} icon i-mdi-headset`} />
         </ActiveLink>
-        <ActiveLink href="/users">
-          <i className={`${style.icon} i-mdi-people`} />
+        <ActiveLink href="/users" title="Fleet assets">
+          <i className={`${style.icon} icon i-mdi-badge-account`} />
         </ActiveLink>
-        <ActiveLink href="/finance">
-          <i className={`${style.icon} i-mdi-account-balance-wallet`} />
+        <ActiveLink href="/finance" title="Job payments">
+          <i className={`${style.icon} icon i-mdi-wallet`} />
         </ActiveLink>
       </nav>
 

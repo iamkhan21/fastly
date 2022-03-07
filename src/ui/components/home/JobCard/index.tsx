@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import { Link } from "wouter";
 import {
-  getCar,
   getCityAndState,
   getCustomerName,
   getJobNumber,
   getTechnicianName,
+  getVehicleModel,
   Job,
 } from "@domain/job";
 import { selectJob } from "@application/jobs";
@@ -19,7 +19,7 @@ const JobCard: FC<Props> = ({ job }) => {
     <Link onClick={() => selectJob(job)} href={`/home/${getJobNumber(job)}`}>
       <section className="card card--primary border rounded p-2 cursor-pointer">
         <h6>{getCustomerName(job)}</h6>
-        <p>{getCar(job)}</p>
+        <p>{getVehicleModel(job)}</p>
         <p>{getCityAndState(job)}</p>
         <p>Assigned to {getTechnicianName(job)}</p>
       </section>

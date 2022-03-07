@@ -15,7 +15,7 @@ const JobList = () => {
     <article className="content z-1 min-w-sm">
       <h4>Dispatches</h4>
       <br />
-      <form onSubmit={searchJobCase}>
+      <form onSubmit={searchJobCase} className={"flex items-center"}>
         <input
           type="search"
           aria-label="Search job case"
@@ -24,8 +24,8 @@ const JobList = () => {
           className="mr-1"
           required
         />
-        <button type="submit">
-          <div className="i-mdi-search text-xl" />
+        <button type="submit" className="">
+          <div className="i-mdi-magnify text-2xl" />
         </button>
       </form>
       <br />

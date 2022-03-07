@@ -31,7 +31,10 @@ export default defineConfig({
         configFile: true,
       },
     }),
-    Unocss({ presets: [presetUno(), presetIcons()] }),
+    Unocss({
+      presets: [presetUno(), presetIcons()],
+      safelist: ["i-mdi-hammer-wrench", "i-mdi-car-tire-alert"],
+    }),
   ],
   test: {
     globals: true,

@@ -1,12 +1,17 @@
 import { app } from "@application/app";
-import jobs from "./jobs.json";
-import { FullJob, Job } from "@domain/job";
+import jobs from "@constants/jobs.json";
+import { FullJob, Job, SelectedJob } from "@domain/job";
 
 export const $jobs = app.createStore<Job[]>(jobs as Job[]);
 
-export const $selectedJob = app.createStore<Job | FullJob | null>(null);
+export const $selectedJob = app.createStore<SelectedJob>(null);
 
-export const selectJob = app.createEvent<Job>();
+type JobDetailsPayload = {
+  jobId: number;
+  signal: AbortSignal;
+};
+
 export const resetJob = app.createEvent();
-export const loadJobDetails = app.createEvent<string>();
-export const loadJobDetailsFx = app.createEffect<number, FullJob>();
+export const selectJob = app.createEvent<Job>();
+export const loadJobDetails = app.createEvent<JobDetailsPayload>();
+export const loadJobDetailsFx = app.createEffect<JobDetailsPayload, FullJob>();

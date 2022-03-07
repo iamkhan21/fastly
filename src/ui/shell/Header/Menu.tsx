@@ -49,7 +49,7 @@ const Menu = () => {
         className="m-2 mt-auto p-1"
         onClick={toggleMenu}
       >
-        <div className="i-mdi-settings text-xl" />
+        <div className="i-mdi-cog text-xl" />
       </button>
       <section
         id="menu"

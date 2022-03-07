@@ -21,6 +21,7 @@
       "@test_utils/*": ["test/utils/*"],
       "@assets/*": ["src/_assets/*"],
       "@domain/*": ["src/domain/*"],
+      "@constants/*": ["src/constants/*"],
       "@application/*": ["src/application/*"],
       "@services/*": ["src/services/*"],
       "@lib/*": ["src/lib/*"],

@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useRoute } from "wouter";
 import { animate } from "motion";
-import { $selectedJob, loadJobDetails } from "@application/jobs";
-import { useStore } from "effector-react";
+import { loadJobDetails } from "@application/jobs";
 
-const JobInfo = React.lazy(() => import("../JobInfo"));
+const JobDescription = React.lazy(() => import("../JobDescription"));
 
 const SidePanel = () => {
   const isOpen = useRef(false);
@@ -34,23 +33,31 @@ const SidePanel = () => {
   }, [match]);
 
   useEffect(() => {
+    const ac = new AbortController();
+
     if (params?.uid) {
-      loadJobDetails(params.uid);
+      loadJobDetails({ jobId: +params.uid, signal: ac.signal });
     }
+
+    return () => ac.abort();
   }, [params?.uid]);
 
   return (
     <aside
       id={"side-panel"}
-      className="fixed top-0 right-0 bottom-0 card card--primary card--right w-md ml-auto z-1 will-change-transform translate-x-full"
+      className="fixed top-0 right-0 bottom-0 card card--primary card--right max-w-2xl w-full ml-auto z-1 px-4 py-2 will-change-transform translate-x-full"
     >
-      <Link href={"/home"}>
-        <button>close</button>
-      </Link>
-      <hr />
+      <section className={"flex justify-between"}>
+        <p>Job {params?.uid}</p>
+        <Link href={"/home"}>
+          <button>close</button>
+        </Link>
+      </section>
+
+      <br />
       {params?.uid && (
         <React.Suspense fallback={<p>Loading</p>}>
-          <JobInfo {...params} />
+          <JobDescription />
         </React.Suspense>
       )}
     </aside>

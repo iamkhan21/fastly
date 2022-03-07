@@ -1,0 +1,472 @@
+{
+  "149656": {
+    "caseDTO": {
+      "id": "84944"
+    },
+    "service": {
+      "id": "2f952607-5ebf-4886-988b-9594a2fc864e",
+      "number": 149656,
+      "status": 3,
+      "statusDescription": "Assigned",
+      "name": "Winch",
+      "serviceId": 2007,
+      "serviceType": "RSA",
+      "created": 1646476545000,
+      "expires": 1646480146000,
+      "demo": false,
+      "partnerName": "Urgently",
+      "description": "I need winch!",
+      "clientJobId": "11",
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "contactPhoneNumber": "3333333333",
+      "contactPhoneNumberCell": false,
+      "rateCard": "GOLD",
+      "contactName": "avii",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "avii",
+      "phone": "3333333333",
+      "phoneCode": 1,
+      "language": "en-US",
+      "textOptIn": true,
+      "id": "b7ef5f1a-8c87-44e4-9ccb-d6ba0527e780",
+      "enabled": false
+    },
+    "location": {
+      "street": "3035 Roosevelt Avenue",
+      "city": "San Antonio",
+      "state": "TX",
+      "zipCode": "78214",
+      "longitude": -98.4812699,
+      "latitude": 29.366497,
+      "address": "TX-536 Spur, San Antonio, TX, USA",
+      "impoundFacility": false,
+      "country": "US",
+      "zip": "78214"
+    },
+    "vehicle": {
+      "make": "RAM",
+      "model": "1500",
+      "color": "Orange",
+      "year": "2023",
+      "transmission": "petrol",
+      "id": "91c324d2-1953-4c9c-9f79-a040826c9afc",
+      "vehicleClass": "HEAVY"
+    },
+    "provider": {
+      "providerId": 25,
+      "providerUid": "ac2a1f69-3bff-11e7-9fff-12abd01c05b6",
+      "distance": -1.0,
+      "truckType": "Flat Bed",
+      "firstName": "John",
+      "lastName": "Galt",
+      "phoneNumber": "5401230791",
+      "currency": "USD",
+      "eta": {},
+      "status": 0,
+      "networkName": "Auto Assign Preferred Providers Network",
+      "costs": [
+        {
+          "type": "BASE",
+          "price": 40.0,
+          "providerPaymentCreated": true
+        }
+      ],
+      "driverId": "1e1b183b-1b23-402c-b41a-dc73d5a176e1",
+      "validProviderDetails": false,
+      "driverDTO": {
+        "uid": "ac6c26de-31af-4edf-8890-a7144e098940",
+        "firstName": "John",
+        "lastName": "Galt",
+        "actionId": 0
+      },
+      "truckDTO": {
+        "uKey": "1e1b183b-1b23-402c-b41a-dc73d5a176e1",
+        "offeredAt": 1646476835000,
+        "truckType": "Flat Bed"
+      },
+      "interested": false
+    },
+    "internalInfo": {},
+    "driverDTO": {
+      "actionId": 0,
+      "offeredAt": 1646476835000,
+      "offerExpires": 1646478085398
+    },
+    "unreadMessageCount": 0,
+    "countryCode": 1,
+    "errors": {},
+    "declineReasons": [],
+    "communicationChannel": {
+      "customerEndPoint": {
+        "endPoint": "3333333333"
+      },
+      "driverEndPoint": {
+        "endPoint": "5401230791"
+      }
+    },
+    "dispatchCommunicationChannel": {
+      "customerEndPoint": {
+        "endPoint": "3333333333"
+      }
+    }
+  },
+  "149599": {
+    "caseDTO": {
+      "id": "84811"
+    },
+    "service": {
+      "id": "b2540ac7-026d-49c0-bf93-cc49ee06e8d8",
+      "number": 149599,
+      "status": 8,
+      "statusDescription": "Completed By Provider",
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "created": 1646418884000,
+      "expires": 1646422485000,
+      "completeTimestamp": 1646420091000,
+      "demo": false,
+      "partnerName": "BMW",
+      "description": "I have a flat tire",
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "contactPhoneNumber": "8008488205",
+      "contactPhoneNumberCell": true,
+      "rateCard": "BRONZE",
+      "contactName": "WENDEL HARRISON",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "WENDEL HARRISON",
+      "phone": "8008488205",
+      "phoneCode": 1,
+      "textOptIn": true,
+      "id": "a45f7016-ca21-4001-9e48-0ebf62ec2084",
+      "enabled": false
+    },
+    "location": {
+      "street": "20 praspiekt Niezaliežnasci",
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false,
+      "country": "BY"
+    },
+    "vehicle": {
+      "make": "MINI",
+      "model": "Cooper S Countryman ALL4",
+      "color": "Light White",
+      "year": "2019",
+      "transmission": "petrol",
+      "id": "86c37438-7d4d-4ae3-9d5b-8e7d313285a8",
+      "vehicleClass": "LIGHT",
+      "vin": "WMZYT5C55K3E70043"
+    },
+    "provider": {
+      "providerId": 25,
+      "providerUid": "ac2a1f69-3bff-11e7-9fff-12abd01c05b6",
+      "distance": 2.259999990463257,
+      "truckType": "Flat Bed",
+      "firstName": "John",
+      "lastName": "Galt",
+      "phoneNumber": "5401230791",
+      "latitude": 53.8617329,
+      "longitude": 27.6111162,
+      "currency": "USD",
+      "eta": {},
+      "status": 1204,
+      "networkName": "BMW Preferred Network",
+      "costs": [
+        {
+          "type": "BASE",
+          "price": 4.44,
+          "providerPaymentCreated": true
+        }
+      ],
+      "driverId": "1e1b183b-1b23-402c-b41a-dc73d5a176e1",
+      "validProviderDetails": false,
+      "driverDTO": {
+        "uid": "ac6c26de-31af-4edf-8890-a7144e098940",
+        "firstName": "John",
+        "lastName": "Galt",
+        "actionId": 0
+      },
+      "truckDTO": {
+        "uKey": "1e1b183b-1b23-402c-b41a-dc73d5a176e1",
+        "offeredAt": 1646418990000,
+        "offerExpires": 1646419049924,
+        "truckType": "Flat Bed"
+      },
+      "distanceUnit": "imperial",
+      "interested": false
+    },
+    "internalInfo": {},
+    "driverDTO": {
+      "actionId": 0,
+      "offeredAt": 1646418990000,
+      "offerExpires": 1646470909655,
+      "latitude": 53.8617329,
+      "longitude": 27.6111162
+    },
+    "unreadMessageCount": 0,
+    "countryCode": 1,
+    "errors": {},
+    "declineReasons": [],
+    "communicationChannel": {
+      "customerEndPoint": {
+        "endPoint": "8008488205"
+      },
+      "driverEndPoint": {
+        "endPoint": "5401230791"
+      }
+    },
+    "dispatchCommunicationChannel": {
+      "customerEndPoint": {
+        "endPoint": "8008488205"
+      }
+    }
+  },
+  "149591": {
+    "caseDTO": {
+      "id": "84882"
+    },
+    "service": {
+      "id": "a45670fb-5795-43fd-b710-46e19b5290ad",
+      "number": 149591,
+      "status": 8,
+      "statusDescription": "Completed By Provider",
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "created": 1646406320000,
+      "expires": 1646409920000,
+      "completeTimestamp": 1646406929000,
+      "demo": false,
+      "partnerName": "Urgently",
+      "description": "I have a flat tire",
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "contactPhoneNumber": "1223232121",
+      "contactPhoneNumberCell": true,
+      "rateCard": "GOLD",
+      "contactName": "karmit test23",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "karmit test23",
+      "phone": "1223232121",
+      "phoneCode": 1,
+      "textOptIn": true,
+      "id": "0a289b85-16e3-4596-bbe3-6775060c674e",
+      "enabled": false
+    },
+    "location": {
+      "street": "20 praspiekt Niezaliežnasci",
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false,
+      "country": "BY"
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "G 450",
+      "color": "Beige",
+      "year": "2023",
+      "transmission": "petrol",
+      "id": "9674f586-ca9b-45e9-897c-1c314fb9ae89",
+      "vehicleClass": "LIGHT"
+    },
+    "provider": {
+      "providerId": 25,
+      "providerUid": "ac2a1f69-3bff-11e7-9fff-12abd01c05b6",
+      "distance": 2.4200000762939453,
+      "truckType": "Flat Bed",
+      "firstName": "John",
+      "lastName": "Galt",
+      "phoneNumber": "5401230791",
+      "latitude": 53.8573831,
+      "longitude": 27.6111343,
+      "currency": "USD",
+      "eta": {},
+      "status": 1204,
+      "networkName": "Urgent.ly",
+      "costs": [
+        {
+          "type": "BASE",
+          "price": 38.0,
+          "providerPaymentCreated": true
+        }
+      ],
+      "driverId": "1e1b183b-1b23-402c-b41a-dc73d5a176e1",
+      "validProviderDetails": false,
+      "driverDTO": {
+        "uid": "ac6c26de-31af-4edf-8890-a7144e098940",
+        "firstName": "John",
+        "lastName": "Galt",
+        "actionId": 0
+      },
+      "truckDTO": {
+        "uKey": "1e1b183b-1b23-402c-b41a-dc73d5a176e1",
+        "offeredAt": 1646406325000,
+        "offerExpires": 1646406564524,
+        "truckType": "Flat Bed"
+      },
+      "distanceUnit": "imperial",
+      "interested": false
+    },
+    "internalInfo": {},
+    "driverDTO": {
+      "actionId": 0,
+      "offeredAt": 1646406325000,
+      "offerExpires": 1646470937056,
+      "latitude": 53.8573831,
+      "longitude": 27.6111343
+    },
+    "unreadMessageCount": 0,
+    "countryCode": 1,
+    "errors": {},
+    "declineReasons": [],
+    "communicationChannel": {
+      "customerEndPoint": {
+        "endPoint": "1223232121"
+      },
+      "driverEndPoint": {
+        "endPoint": "5401230791"
+      }
+    },
+    "dispatchCommunicationChannel": {
+      "customerEndPoint": {
+        "endPoint": "1223232121"
+      }
+    }
+  },
+  "149590": {
+    "caseDTO": {
+      "id": "84882"
+    },
+    "service": {
+      "id": "e048bf23-ae97-4f63-b2f3-034eb9208ffa",
+      "number": 149590,
+      "status": 8,
+      "statusDescription": "Completed By Provider",
+      "name": "Flat Tire",
+      "serviceId": 2005,
+      "serviceType": "RSA",
+      "created": 1646406018000,
+      "expires": 1646409619000,
+      "completeTimestamp": 1646406239000,
+      "demo": false,
+      "partnerName": "Urgently",
+      "description": "I have a flat tire",
+      "type": "RSA_ON_DEMAND",
+      "dispatchOnHold": false,
+      "contactPhoneNumber": "1223232121",
+      "contactPhoneNumberCell": true,
+      "rateCard": "GOLD",
+      "contactName": "karmit test23",
+      "roundTrip": false,
+      "reuniteTowRequired": false
+    },
+    "personalInfo": {
+      "name": "karmit test23",
+      "phone": "1223232121",
+      "phoneCode": 1,
+      "textOptIn": true,
+      "id": "0a289b85-16e3-4596-bbe3-6775060c674e",
+      "enabled": false
+    },
+    "location": {
+      "street": "20 praspiekt Niezaliežnasci",
+      "city": "Minsk",
+      "state": "Minskaja voblas?",
+      "longitude": 27.558972,
+      "latitude": 53.9006011,
+      "address": "Minsk, Belarus Minsk Region",
+      "impoundFacility": false,
+      "country": "BY"
+    },
+    "vehicle": {
+      "make": "BMW",
+      "model": "G 450",
+      "color": "Beige",
+      "year": "2023",
+      "transmission": "petrol",
+      "id": "9674f586-ca9b-45e9-897c-1c314fb9ae89",
+      "vehicleClass": "LIGHT"
+    },
+    "provider": {
+      "providerId": 25,
+      "providerUid": "ac2a1f69-3bff-11e7-9fff-12abd01c05b6",
+      "distance": 2.4200000762939453,
+      "truckType": "Flat Bed",
+      "firstName": "John",
+      "lastName": "Galt",
+      "phoneNumber": "5401230791",
+      "latitude": 53.8573831,
+      "longitude": 27.6111343,
+      "currency": "USD",
+      "eta": {},
+      "status": 1204,
+      "networkName": "Urgent.ly",
+      "costs": [
+        {
+          "type": "BASE",
+          "price": 38.0,
+          "providerPaymentCreated": true
+        }
+      ],
+      "driverId": "1e1b183b-1b23-402c-b41a-dc73d5a176e1",
+      "validProviderDetails": false,
+      "driverDTO": {
+        "uid": "ac6c26de-31af-4edf-8890-a7144e098940",
+        "firstName": "John",
+        "lastName": "Galt",
+        "actionId": 0
+      },
+      "truckDTO": {
+        "uKey": "1e1b183b-1b23-402c-b41a-dc73d5a176e1",
+        "offeredAt": 1646406024000,
+        "offerExpires": 1646406264383,
+        "truckType": "Flat Bed"
+      },
+      "distanceUnit": "imperial",
+      "interested": false
+    },
+    "internalInfo": {},
+    "driverDTO": {
+      "actionId": 0,
+      "offeredAt": 1646406024000,
+      "offerExpires": 1646470963037,
+      "latitude": 53.8573831,
+      "longitude": 27.6111343
+    },
+    "unreadMessageCount": 0,
+    "countryCode": 1,
+    "errors": {},
+    "declineReasons": [],
+    "communicationChannel": {
+      "customerEndPoint": {
+        "endPoint": "1223232121"
+      },
+      "driverEndPoint": {
+        "endPoint": "5401230791"
+      }
+    },
+    "dispatchCommunicationChannel": {
+      "customerEndPoint": {
+        "endPoint": "1223232121"
+      }
+    }
+  }
+}
