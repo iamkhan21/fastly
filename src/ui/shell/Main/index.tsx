@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "wouter";
+import ComponentLoader from "@ui/components/shared/ComponentLoader";
 
 const Home = React.lazy(() => import("@ui/views/Home"));
 const Users = React.lazy(() => import("@ui/views/Users"));
@@ -9,7 +10,7 @@ const NotFound = React.lazy(() => import("@ui/views/NotFound"));
 const Main = () => {
   return (
     <main data-testid="main">
-      <React.Suspense fallback={<p>Loading..</p>}>
+      <React.Suspense fallback={<ComponentLoader />}>
         <Switch>
           <Route path="/">
             <Redirect to="/home" />

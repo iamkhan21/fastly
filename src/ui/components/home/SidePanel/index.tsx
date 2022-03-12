@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link, useRoute } from "wouter";
 import { animate } from "motion";
 import { loadJobDetails } from "@application/jobs";
+import ComponentLoader from "@ui/components/shared/ComponentLoader";
 
 const JobDescription = React.lazy(() => import("../JobDescription"));
 
@@ -56,7 +57,7 @@ const SidePanel = () => {
 
       <br />
       {params?.uid && (
-        <React.Suspense fallback={<p>Loading</p>}>
+        <React.Suspense fallback={<ComponentLoader />}>
           <JobDescription />
         </React.Suspense>
       )}
