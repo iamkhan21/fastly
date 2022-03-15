@@ -1,19 +1,20 @@
 import type { Credentials, Token, User } from "@domain/user";
-
-export type UserData = { user: User; token: Token };
+import { SigninData, Tokens, TokenType } from "@services/types";
 
 export interface AuthenticationService {
-  signin(credentials: Credentials): Promise<UserData>;
+  signin(credentials: Credentials): Promise<SigninData | null>;
 
   resetPassword(email: Pick<Credentials, "email">): Promise<void>;
 
-  validateToken(token: Token): Promise<User | null>;
+  refreshToken(token: Token): Promise<Tokens | null>;
+
+  getUser(token: Token): Promise<User | null>;
 }
 
 export interface StorageService {
-  setToken(token: Token): Promise<void>;
+  setTokens(tokens: Tokens): Promise<void>;
 
-  getToken(): Promise<Token | undefined>;
+  getToken(type: TokenType): Promise<Token | undefined>;
 
-  removeToken(): Promise<void>;
+  removeTokens(): Promise<void>;
 }

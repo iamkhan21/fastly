@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import { render, screen } from "@test_utils/test-utils";
+import { render, screen } from "@tests/utils/test-utils";
 import Auth from "@ui/views/Auth";
 
 describe("Auth view", () => {

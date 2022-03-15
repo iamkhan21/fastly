@@ -1,19 +1,20 @@
 import { StorageService } from "@services/ports";
-import type { Token } from "@domain/user";
-import { del, get, set } from "idb-keyval";
+import { delMany, get, setMany } from "idb-keyval";
+import { TokenType } from "@services/types";
 
 export function storageAdapter(): StorageService {
-  const tokenKey = "token";
-
   return {
-    async setToken(token: Token): Promise<void> {
-      return set(tokenKey, token);
+    async setTokens(tokens) {
+      return setMany([
+        [TokenType.auth_token, tokens.token],
+        [TokenType.refresh_token, tokens.refreshToken],
+      ]);
     },
-    getToken(): Promise<Token | undefined> {
-      return get(tokenKey);
+    getToken(type) {
+      return get(type);
     },
-    removeToken(): Promise<void> {
-      return del(tokenKey);
+    removeTokens() {
+      return delMany([TokenType.auth_token, TokenType.refresh_token]);
     },
   };
 }

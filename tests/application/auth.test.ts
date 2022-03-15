@@ -11,7 +11,7 @@ import {
   signinFx,
 } from "@application/auth";
 import "@application/init";
-import { getMockedUser } from "@test_utils/test-utils";
+import { getMockedUser } from "@tests/utils/test-utils";
 import { getNoUser } from "@domain/user";
 
 function mockSuccessAuth() {

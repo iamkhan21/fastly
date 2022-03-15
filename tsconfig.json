@@ -18,7 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@test_utils/*": ["test/utils/*"],
+      "@tests/*": ["tests/*"],
       "@assets/*": ["src/_assets/*"],
       "@domain/*": ["src/domain/*"],
       "@constants/*": ["src/constants/*"],

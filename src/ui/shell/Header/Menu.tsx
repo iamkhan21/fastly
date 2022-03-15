@@ -22,7 +22,7 @@ const Menu = () => {
 
   function toggleMenu() {
     const selector = "#menu";
-    const duration = 0.1;
+    const duration = 0.15;
 
     if (state.current) {
       animate(

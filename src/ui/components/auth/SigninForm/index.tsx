@@ -7,7 +7,11 @@ const SigninForm = ({ useStoreHook = useStore }) => {
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    signIn({ email: "", password: "" });
+    // TODO Remove creds
+    signIn({
+      email: "Braulio60@yahoo.com",
+      password: "CWJ_40_X9HMN80A",
+    });
   }
 
   return (

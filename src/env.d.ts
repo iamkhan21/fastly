@@ -3,6 +3,7 @@
 interface ImportMetaEnv {
   readonly VITE_PROJECT_NAME: string;
   readonly VITE_MAPBOX_KEY: string;
+  readonly VITE_SERVER_URL: string;
 }
 
 interface ImportMeta {

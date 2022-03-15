@@ -5,5 +5,5 @@ export function getJobTypeIcon(job: Job): string | null {
   const jobId = getJobTypeId(job);
   if (!jobId) return null;
   // @ts-ignore
-    return jobTypeIcons[jobId];
+  return jobTypeIcons[jobId];
 }
