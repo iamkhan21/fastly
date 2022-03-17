@@ -15,21 +15,39 @@ const SigninForm = ({ useStoreHook = useStore }) => {
   }
 
   return (
-    <form className="py-3" onSubmit={onSubmit}>
-      <div>
-        <label>
-          <span>Email</span>
-          <input data-testid="email" disabled={loading} type="email" />
+    <form className="pt-3" onSubmit={onSubmit}>
+      <div className={"mb-3"}>
+        <label className={"flex flex-col sm:flex-row sm:items-center gap-1"}>
+          <span className={"sm:basis-25"}>Email</span>
+          <input
+            className={"w-full"}
+            data-testid="email"
+            disabled={loading}
+            type="email"
+          />
         </label>
       </div>
-      <div>
-        <label>
-          <span>Password</span>
-          <input data-testid="password" disabled={loading} type="password" />
+      <div className={"mb-4"}>
+        <label className={"flex flex-col sm:flex-row sm:items-center gap-1"}>
+          <span className={"sm:basis-25"}>Password</span>
+          <input
+            className={"w-full"}
+            data-testid="password"
+            disabled={loading}
+            type="password"
+          />
         </label>
       </div>
-      <div>
-        <button data-testid="submit" disabled={loading} type="submit">
+      <div className={"flex items-center justify-between"}>
+        <a href="" className={"link"}>
+          Forget the password?
+        </a>
+        <button
+          className={"px-6 py-2"}
+          data-testid="submit"
+          disabled={loading}
+          type="submit"
+        >
           {loading ? "Trying to sign in.." : "Sign In"}
         </button>
       </div>
