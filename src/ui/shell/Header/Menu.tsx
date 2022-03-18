@@ -46,19 +46,19 @@ const Menu = () => {
       <button
         id="menu-btn"
         type="button"
-        className="m-2 mt-auto p-1"
+        className="m-2 mt-auto btn btn-icon btn-outline"
         onClick={toggleMenu}
       >
-        <div className="i-mdi-cog text-xl" />
+        <div className="i-mdi-cog" />
       </button>
       <section
         id="menu"
-        className="absolute bottom-10 left-10 card card--primary p-2 min-w-60 rounded origin-bottom-left will-change-transform"
+        className="absolute bottom-10 left-10 card card--primary py-4 px-3 min-w-60 rounded origin-bottom-left will-change-transform"
         style={{ transform: "scale(0)" }}
       >
         <h4 className="mb-2">Menu</h4>
         <nav>
-          <button onClick={() => logout()}>Logout</button>
+          <button className={'btn btn-danger btn-small'} onClick={() => logout()}>Logout</button>
         </nav>
       </section>
     </>

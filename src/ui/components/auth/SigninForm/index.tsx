@@ -43,7 +43,7 @@ const SigninForm = ({ useStoreHook = useStore }) => {
           Forget the password?
         </a>
         <button
-          className={"px-6 py-2"}
+          className={"btn btn-primary"}
           data-testid="submit"
           disabled={loading}
           type="submit"
