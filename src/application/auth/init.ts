@@ -9,10 +9,15 @@ import {
 } from "@application/auth/index";
 import { forward } from "effector";
 import { authAdapter } from "@services/authAdapter";
-import { getNoUser, Token } from "@domain/user";
+import { getNoUser } from "@domain/user";
 import { storageAdapter } from "@services/storageAdapter";
 import { of } from "await-of";
-import { SigninData, TokenType } from "@services/types";
+import {
+  AuthToken,
+  RefreshToken,
+  SigninData,
+  TokenType,
+} from "@services/types";
 
 signinFx.use(async (credentials) => {
   const [data, err] = await of(authAdapter().signin(credentials));
@@ -34,7 +39,7 @@ logoutFx.use(async () => {
 
 checkAuthFx.use(async () => {
   // Check token in storage
-  const token: Token | undefined = await storageAdapter().getToken(
+  const token: RefreshToken | undefined = await storageAdapter().getToken(
     TokenType.refresh_token
   );
 
@@ -52,7 +57,9 @@ checkAuthFx.use(async () => {
   }
 
   // Get user
-  const [user, err2] = await of(authAdapter().getUser(tokens.token));
+  const [user, err2] = await of(
+    authAdapter().getUser(tokens.token as AuthToken)
+  );
 
   if (err2 || !user) {
     throw "User not found";

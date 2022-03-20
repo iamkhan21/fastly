@@ -1,8 +1,8 @@
 import { forward } from "effector";
-import { AppGate } from "@application/app/index";
+import { initApp } from "@application/app/index";
 import { checkAuth } from "@application/auth";
 
 forward({
-  from: AppGate.open,
+  from: initApp,
   to: [checkAuth],
 });

@@ -1,6 +1,9 @@
 import { Token, User } from "@domain/user";
 
-export type Tokens = { token: Token; refreshToken: Token };
+export type AuthToken = Token;
+export type RefreshToken = Token;
+
+export type Tokens = { token: AuthToken; refreshToken: RefreshToken };
 
 export enum TokenType {
   auth_token = "auth_token",

@@ -1,9 +1,9 @@
 import React, { FC, lazy, Suspense } from "react";
 import { UserState } from "@application/auth/types";
 import Loader from "@ui/components/shared/Loader";
-import { useAuth } from "@application/auth";
-import { useAppGate } from "@application/app";
 import { useTitle } from "@ui/hooks/useTitle";
+import { useAppInit } from "@ui/hooks/useAppInit";
+import { useAuthState } from "@ui/hooks/useAuthState";
 
 interface Props {
   useAuthHook?: () => UserState;
@@ -15,8 +15,8 @@ const Auth = lazy(() => import("@ui/views/Auth"));
 
 const AuthGuard: FC<Props> = ({
   children,
-  useGateHook = useAppGate,
-  useAuthHook = useAuth,
+  useGateHook = useAppInit,
+  useAuthHook = useAuthState,
   useTitleHook = useTitle,
 }) => {
   useGateHook();

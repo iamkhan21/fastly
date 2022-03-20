@@ -2,7 +2,7 @@ import React from "react";
 import { useStore } from "effector-react";
 import { $selectedJob } from "@application/jobs";
 import InfoLoader from "@ui/components/home/JobDescription/InfoLoader";
-import { getJobStatus, getJobTypeName, getTechnicianName } from "@domain/job";
+import { getJobStatus, getJobTypeId, getTechnicianName } from "@domain/job";
 
 const JobInfo = () => {
   const job = useStore($selectedJob);
@@ -14,7 +14,7 @@ const JobInfo = () => {
         <section className={"flex items-center space-x-3 mb-2"}>
           {/*<img className={`text-xl icon ${getJobTypeIcon(job)} mr-2`} />*/}
           <h5 className="">
-            <InfoLoader loadData={() => getJobTypeName(job)} />
+            <InfoLoader loadData={() => getJobTypeId(job)} />
           </h5>
           <span className={"bg-gray-700 rounded px-2 py-0"}>
             {getJobStatus(job)}

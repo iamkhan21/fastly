@@ -1,11 +1,16 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, useEffect } from "react";
 import JobCard from "@ui/components/home/JobCard";
 import { useStore } from "effector-react";
-import { $jobs } from "@application/jobs";
+import { $jobs, loadActiveJobs, loadActiveJobsFx } from "@application/jobs";
 import { getJobNumber } from "@domain/job";
 
-const JobList = () => {
-  const jobs = useStore($jobs);
+const JobList = ({ useStoreHook = useStore }) => {
+  const loading = useStoreHook(loadActiveJobsFx.pending);
+  const jobs = useStoreHook($jobs);
+
+  useEffect(() => {
+    loadActiveJobs();
+  }, []);
 
   function searchJobCase(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -33,6 +38,7 @@ const JobList = () => {
         {jobs.map((job) => (
           <JobCard key={getJobNumber(job)} job={job} />
         ))}
+        {loading && <p>Loading</p>}
       </section>
     </article>
   );

@@ -58,7 +58,12 @@ const Menu = () => {
       >
         <h4 className="mb-2">Menu</h4>
         <nav>
-          <button className={'btn btn-danger btn-small'} onClick={() => logout()}>Logout</button>
+          <button
+            className={"btn btn-danger btn-small"}
+            onClick={() => logout()}
+          >
+            Logout
+          </button>
         </nav>
       </section>
     </>

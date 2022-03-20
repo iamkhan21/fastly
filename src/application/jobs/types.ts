@@ -1,1 +1,4 @@
-export type test = string;
+export type JobDetailsPayload = {
+  jobId: number;
+  signal: AbortSignal;
+};
