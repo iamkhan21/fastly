@@ -49,7 +49,7 @@ loadActiveJobsFx.use(async () => {
   const [data, err] = await of(jobsAdapter().getActiveJobs(token));
 
   await new Promise((resolve) => {
-    setTimeout(resolve, 5_000);
+    setTimeout(resolve, 1_000);
   });
 
   if (err || !data) {

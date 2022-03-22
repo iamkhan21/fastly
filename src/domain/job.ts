@@ -77,10 +77,10 @@ export function getTechnicianName(job: SelectedJob): string {
   return job?.provider?.name || "Unnamed technician";
 }
 
-export function getVehicleDescription(job: FullJob | null): string | null {
+export function getVehicleDescription(job: SelectedJob): string | null {
   if (!job) return null;
 
-  const { make = "", model = "", color = "", year = "" } = job.vehicle || {};
+  const { make = "", model = "", color = "", year = "" } = (job as FullJob).vehicle || {};
 
   return `${year} ${color} ${make} ${model}`.trim();
 }

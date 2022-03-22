@@ -16,8 +16,12 @@ const JobList = ({ useStoreHook = useStore }) => {
     e.preventDefault();
   }
 
+  const fetchMsg = jobs.length
+    ? "Looking for new active jobs"
+    : "Fetching active jobs";
+
   return (
-    <article className="content z-1 min-w-sm">
+    <aside className="content z-1 min-w-sm">
       <h4>Dispatches</h4>
       <br />
       <form onSubmit={searchJobCase} className={"flex items-center"}>
@@ -26,21 +30,25 @@ const JobList = ({ useStoreHook = useStore }) => {
           aria-label="Search job case"
           name="job-case"
           placeholder="Find case"
-          className="mr-1"
+          className="mr-2 p-2 rounded"
           required
         />
-        <button type="submit" className="">
-          <div className="i-mdi-magnify text-2xl" />
+        <button type="submit" className="btn btn-small btn-icon">
+          <i className="block i-mdi-magnify text-base" />
         </button>
       </form>
       <br />
-      <section className="space-y-3 overflow-y-auto max-h-80vh p-1">
+      <section className="space-y-3 max-h-80vh">
         {jobs.map((job) => (
           <JobCard key={getJobNumber(job)} job={job} />
         ))}
-        {loading && <p>Loading</p>}
+        {loading && (
+          <section>
+            <h6>{fetchMsg}...</h6>
+          </section>
+        )}
       </section>
-    </article>
+    </aside>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { logout } from "@application/auth";
 import { animate } from "motion";
+import { Link } from "wouter";
 
 const Menu = () => {
   const state = useRef(false);
@@ -53,18 +54,16 @@ const Menu = () => {
       </button>
       <section
         id="menu"
-        className="absolute bottom-10 left-10 card card--primary py-4 px-3 min-w-60 rounded origin-bottom-left will-change-transform"
+        className="absolute bottom-10 left-10 card card--primary py-3 px-4 min-w-60 rounded origin-bottom-left will-change-transform"
         style={{ transform: "scale(0)" }}
       >
-        <h4 className="mb-2">Menu</h4>
-        <nav>
-          <button
-            className={"btn btn-danger btn-small"}
-            onClick={() => logout()}
-          >
-            Logout
-          </button>
+        <h4 className="m-0 mb-2">Menu</h4>
+        <nav className={"pb-4 flex flex-col"}>
+          <Link href="/organization">Business info</Link>
         </nav>
+        <button className={"btn btn-danger btn-small"} onClick={() => logout()}>
+          Logout
+        </button>
       </section>
     </>
   );
