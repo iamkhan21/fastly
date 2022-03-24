@@ -2,8 +2,8 @@ import React from "react";
 import {
   getCustomerName,
   getCustomerPhone,
+  getVehicle,
   getVehicleClass,
-  getVehicleDescription,
   getVehicleVinNumber,
 } from "@domain/job";
 import InfoLoader from "@ui/components/home/JobDescription/InfoLoader";
@@ -40,7 +40,7 @@ const CustomerInfo = () => {
           </figure>
           <section className="min-w-xs">
             <p className="mb-1">
-              <InfoLoader loadData={() => getVehicleDescription(job)} />
+              <InfoLoader loadData={() => getVehicle(job)} />
             </p>
             <p className="mb-1">
               <InfoLoader loadData={() => getVehicleVinNumber(job)} />
