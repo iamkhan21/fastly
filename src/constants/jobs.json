@@ -1,217 +1,58 @@
-[
-  {
-    "caseDTO": {
-      "id": "84944"
+{
+  "f72a6b1f-d986-4c01-89b4-c00bc3a19d2f": [
+    {
+      "caseDTO": {
+        "id": "86093"
+      },
+      "service": {
+        "number": 151094,
+        "status": 8,
+        "serviceId": 2004
+      },
+      "personalInfo": {
+        "name": "te"
+      },
+      "location": {
+        "address": "8609 Westwood Center Dr, Vienna, VA 22182, USA"
+      },
+      "vehicle": {
+        "make": "BMW",
+        "model": "1 Series"
+      },
+      "provider": {
+        "firstName": "John Galt"
+      },
+      "unreadMessageCount": 0,
+      "vipTagDTOS": [],
+      "errors": {},
+      "alerts": []
     },
-    "service": {
-      "number": 149656,
-      "status": 3,
-      "name": "Winch",
-      "serviceId": 2007,
-      "serviceType": "RSA",
-      "demo": false,
-      "partnerName": "Urgently",
-      "alertLevel": 0,
-      "type": "RSA_ON_DEMAND",
-      "dispatchOnHold": false,
-      "rateCard": "GOLD",
-      "roundTrip": false,
-      "reuniteTowRequired": false
-    },
-    "personalInfo": {
-      "name": "avii",
-      "firstName": "avii",
-      "textOptIn": true,
-      "enabled": false
-    },
-    "location": {
-      "city": "San Antonio",
-      "state": "TX",
-      "longitude": -98.4812699,
-      "latitude": 29.366497,
-      "address": "TX-536 Spur, San Antonio, TX, USA",
-      "impoundFacility": false
-    },
-    "vehicle": {
-      "make": "RAM",
-      "model": "1500",
-      "color": "Orange",
-      "year": "2023"
-    },
-    "provider": {
-      "firstName": "John, Galt",
-      "estimatedDuration": "150.0",
-      "networkName": "Auto Assign Preferred Providers Network",
-      "costs": [],
-      "validProviderDetails": false,
-      "communicationPlatformCodes": ["urgently"],
-      "interested": false
-    },
-    "unreadMessageCount": 0,
-    "vipTagDTOS": [],
-    "errors": {},
-    "alerts": []
-  },
-  {
-    "caseDTO": {
-      "id": "84811"
-    },
-    "service": {
-      "number": 149599,
-      "status": 8,
-      "name": "Flat Tire",
-      "serviceId": 2005,
-      "serviceType": "RSA",
-      "demo": false,
-      "partnerName": "BMW",
-      "alertLevel": 0,
-      "type": "RSA_ON_DEMAND",
-      "dispatchOnHold": false,
-      "rateCard": "BRONZE",
-      "roundTrip": false,
-      "reuniteTowRequired": false
-    },
-    "personalInfo": {
-      "name": "WENDEL HARRISON",
-      "firstName": "WENDEL HARRISON",
-      "textOptIn": true,
-      "enabled": false
-    },
-    "location": {
-      "city": "Minsk",
-      "state": "Minskaja voblas?",
-      "longitude": 27.558972,
-      "latitude": 53.9006011,
-      "address": "Minsk, Belarus Minsk Region",
-      "impoundFacility": false
-    },
-    "vehicle": {
-      "make": "MINI",
-      "model": "Cooper S Countryman ALL4",
-      "color": "Light White",
-      "year": "2019"
-    },
-    "provider": {
-      "firstName": "John, Galt",
-      "estimatedDuration": "50.0",
-      "status": 1102,
-      "networkName": "BMW Preferred Network",
-      "costs": [],
-      "validProviderDetails": false,
-      "communicationPlatformCodes": ["urgently"],
-      "interested": false
-    },
-    "unreadMessageCount": 0,
-    "vipTagDTOS": [],
-    "errors": {},
-    "alerts": []
-  },
-  {
-    "caseDTO": {
-      "id": "84882"
-    },
-    "service": {
-      "number": 149591,
-      "status": 8,
-      "name": "Flat Tire",
-      "serviceId": 2005,
-      "serviceType": "RSA",
-      "demo": false,
-      "partnerName": "Urgently",
-      "alertLevel": 0,
-      "type": "RSA_ON_DEMAND",
-      "dispatchOnHold": false,
-      "rateCard": "GOLD",
-      "roundTrip": false,
-      "reuniteTowRequired": false
-    },
-    "personalInfo": {
-      "name": "karmit test23",
-      "firstName": "karmit test23",
-      "textOptIn": true,
-      "enabled": false
-    },
-    "location": {
-      "city": "Minsk",
-      "state": "Minskaja voblas?",
-      "longitude": 27.558972,
-      "latitude": 53.9006011,
-      "address": "Minsk, Belarus Minsk Region",
-      "impoundFacility": false
-    },
-    "vehicle": {
-      "make": "BMW",
-      "model": "G 450",
-      "color": "Beige",
-      "year": "2023"
-    },
-    "provider": {
-      "firstName": "John, Galt",
-      "estimatedDuration": "20.0",
-      "status": 1102,
-      "networkName": "Urgent.ly",
-      "costs": [],
-      "validProviderDetails": false,
-      "communicationPlatformCodes": ["urgently"],
-      "interested": false
-    },
-    "unreadMessageCount": 0,
-    "vipTagDTOS": [],
-    "errors": {},
-    "alerts": []
-  },
-  {
-    "caseDTO": {
-      "id": "84882"
-    },
-    "service": {
-      "number": 149590,
-      "status": 8,
-      "name": "Flat Tire",
-      "serviceId": 2005,
-      "serviceType": "RSA",
-      "demo": false,
-      "partnerName": "Urgently",
-      "alertLevel": 0,
-      "type": "RSA_ON_DEMAND",
-      "dispatchOnHold": false,
-      "rateCard": "GOLD",
-      "roundTrip": false,
-      "reuniteTowRequired": false
-    },
-    "personalInfo": {
-      "name": "karmit test23",
-      "firstName": "karmit test23",
-      "textOptIn": true,
-      "enabled": false
-    },
-    "location": {
-      "city": "Minsk",
-      "state": "Minskaja voblas?",
-      "longitude": 27.558972,
-      "latitude": 53.9006011,
-      "address": "Minsk, Belarus Minsk Region",
-      "impoundFacility": false
-    },
-    "vehicle": {
-      "make": "BMW",
-      "model": "G 450",
-      "color": "Beige",
-      "year": "2023"
-    },
-    "provider": {
-      "firstName": "John, Galt",
-      "estimatedDuration": "50.0",
-      "status": 1102,
-      "networkName": "Urgent.ly",
-      "costs": [],
-      "validProviderDetails": false,
-      "communicationPlatformCodes": ["urgently"],
-      "interested": false
-    },
-    "unreadMessageCount": 0,
-    "vipTagDTOS": [],
-    "errors": {},
-    "alerts": []
-  }
-]
+    {
+      "caseDTO": {
+        "id": "85935"
+      },
+      "service": {
+        "number": 150898,
+        "status": 8,
+        "serviceId": 2001
+      },
+      "personalInfo": {
+        "name": "FARAH"
+      },
+      "location": {
+        "address": "3245 Rio Dr, Falls Church, VA 22041, USA Virginia"
+      },
+      "vehicle": {
+        "make": "HYUNDAI",
+        "model": "R10"
+      },
+      "provider": {
+        "firstName": "Ujjaval JaniNew"
+      },
+      "unreadMessageCount": 0,
+      "vipTagDTOS": [],
+      "errors": {},
+      "alerts": []
+    }
+  ]
+}

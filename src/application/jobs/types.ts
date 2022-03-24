@@ -1,4 +1,6 @@
+import { JobUID } from "@domain/job";
+
 export type JobDetailsPayload = {
-  jobId: number;
-  signal: AbortSignal;
+  jobUID: JobUID;
+  abortController: AbortController;
 };

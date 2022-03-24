@@ -1,12 +1,13 @@
 import { JobsService } from "@services/ports";
-import { getActiveJobs } from "@services/api";
-import { Job } from "@domain/job";
-import { AuthToken } from "@services/types";
+import { getActiveJobs, getJobInfo } from "@services/api";
 
 export function jobsAdapter(): JobsService {
   return {
-    getActiveJobs(token: AuthToken): Promise<Job[] | null> {
-      return getActiveJobs(token);
+    getJobInfo(token, jobUID, ac) {
+      return getJobInfo(token, jobUID, ac);
+    },
+    getActiveJobs(token, ac) {
+      return getActiveJobs(token, ac);
     },
   };
 }

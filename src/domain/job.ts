@@ -1,6 +1,8 @@
+export type JobUID = number;
+
 export type Job = {
   caseDTO: { id: string };
-  service: { number: number; serviceId: number; status: number };
+  service: { number: JobUID; serviceId: number; status: number };
   personalInfo: { name: string };
   location: { address: string };
   vehicle: { model: string; make: string };
@@ -19,30 +21,35 @@ export type Job = {
 export type FullJob = {
   caseDTO: { id: string };
   service: {
-    number: number;
+    number: JobUID;
     created: number;
+    completeTimestamp?: number;
+    estimatedTowMiles?: number;
+    id: string;
     serviceId: number;
     status: number;
   };
   personalInfo: { phone: string; name: string; phoneCode: number };
-  location: { address: string; latitude: number; longitude: number };
+  location: { address: string };
+  dropOffLocation?: { address: string; name: string };
   vehicle: {
-    color: string;
     year: string;
     vehicleClass: string;
     model: string;
-    vin: string;
+    color: string;
+    vin?: string;
     make: string;
   };
   provider: {
-    name: string;
-    costs: { providerPaymentCreated: boolean; price: number; type: string }[];
+    costs: { type: string };
     phoneNumber: string;
-    eta: { duration: number; updateAt: number; receivedAt: number };
-    networkName: string;
-    currency: string;
-    status: number;
+    eta?: { duration: number; updateAt: number; receivedAt: number };
+    driverId: string;
+    name: string;
   };
+  unreadMessageCount: number;
+  countryCode: number;
+  errors: {};
 };
 
 export type SelectedJob = Job | FullJob | null;
@@ -80,7 +87,12 @@ export function getTechnicianName(job: SelectedJob): string {
 export function getVehicleDescription(job: SelectedJob): string | null {
   if (!job) return null;
 
-  const { make = "", model = "", color = "", year = "" } = (job as FullJob).vehicle || {};
+  const {
+    make = "",
+    model = "",
+    color = "",
+    year = "",
+  } = (job as FullJob).vehicle || {};
 
   return `${year} ${color} ${make} ${model}`.trim();
 }
@@ -98,7 +110,7 @@ export function getCustomerPhone(job: SelectedJob): string | null {
 export function getVehicleVinNumber(job: SelectedJob): string | null {
   if (!job) return null;
 
-  return (job as FullJob)?.vehicle?.vin;
+  return (job as FullJob)?.vehicle?.vin || "";
 }
 
 export function getVehicleClass(job: SelectedJob): string | null {

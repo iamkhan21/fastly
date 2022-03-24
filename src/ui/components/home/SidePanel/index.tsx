@@ -34,13 +34,13 @@ const SidePanel = () => {
   }, [match]);
 
   useEffect(() => {
-    const ac = new AbortController();
+    const abortController = new AbortController();
 
     if (params?.uid) {
-      loadJobDetails({ jobId: +params.uid, signal: ac.signal });
+      loadJobDetails({ jobUID: +params.uid, abortController });
     }
 
-    return () => ac.abort();
+    return () => abortController.abort();
   }, [params?.uid]);
 
   return (

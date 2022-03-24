@@ -9,7 +9,11 @@ const JobList = ({ useStoreHook = useStore }) => {
   const jobs = useStoreHook($jobs);
 
   useEffect(() => {
-    loadActiveJobs();
+    const abortController = new AbortController();
+
+    loadActiveJobs(abortController);
+
+    return () => abortController.abort();
   }, []);
 
   function searchJobCase(e: FormEvent<HTMLFormElement>) {

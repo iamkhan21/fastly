@@ -1,14 +1,14 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@iconify-json/mdi': 1.1.2
+  '@iconify-json/mdi': 1.1.3
   '@testing-library/jest-dom': 5.16.2
   '@testing-library/react': 12.1.4
   '@testing-library/react-hooks': 7.0.2
   '@testing-library/user-event': 13.5.0
   '@types/mapbox-gl': 2.6.3
-  '@types/node': 17.0.21
-  '@types/react': 17.0.41
+  '@types/node': 17.0.23
+  '@types/react': 17.0.42
   '@types/react-dom': 17.0.14
   '@unocss/preset-icons': 0.29.5
   '@vitejs/plugin-react': 1.2.0
@@ -25,7 +25,7 @@ specifiers:
   motion: 10.7.0
   open-props: 1.3.9
   postcss: 8.4.12
-  postcss-import: 14.0.2
+  postcss-import: 14.1.0
   postcss-jit-props: 1.0.5
   postcss-nested: 5.0.6
   postcss-preset-env: 7.4.3
@@ -36,7 +36,7 @@ specifiers:
   typescript: 4.6.2
   unocss: 0.29.5
   vite: 2.8.6
-  vitest: 0.7.6
+  vitest: 0.7.10
   wouter: 2.8.0-alpha.2
   wretch: 1.7.9
 
@@ -53,14 +53,14 @@ dependencies:
   wretch: 1.7.9
 
 devDependencies:
-  '@iconify-json/mdi': 1.1.2
+  '@iconify-json/mdi': 1.1.3
   '@testing-library/jest-dom': 5.16.2
   '@testing-library/react': 12.1.4_react-dom@17.0.2+react@17.0.2
   '@testing-library/react-hooks': 7.0.2_react-dom@17.0.2+react@17.0.2
   '@testing-library/user-event': 13.5.0
   '@types/mapbox-gl': 2.6.3
-  '@types/node': 17.0.21
-  '@types/react': 17.0.41
+  '@types/node': 17.0.23
+  '@types/react': 17.0.42
   '@types/react-dom': 17.0.14
   '@unocss/preset-icons': 0.29.5
   '@vitejs/plugin-react': 1.2.0
@@ -71,7 +71,7 @@ devDependencies:
   jsdom: 19.0.0
   open-props: 1.3.9
   postcss: 8.4.12
-  postcss-import: 14.0.2_postcss@8.4.12
+  postcss-import: 14.1.0_postcss@8.4.12
   postcss-jit-props: 1.0.5_postcss@8.4.12
   postcss-nested: 5.0.6_postcss@8.4.12
   postcss-preset-env: 7.4.3_postcss@8.4.12
@@ -80,7 +80,7 @@ devDependencies:
   typescript: 4.6.2
   unocss: 0.29.5
   vite: 2.8.6
-  vitest: 0.7.6_c8@7.11.0+jsdom@19.0.0
+  vitest: 0.7.10_c8@7.11.0+jsdom@19.0.0
 
 packages:
 
@@ -495,18 +495,14 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@iconify-json/mdi/1.1.2:
-    resolution: {integrity: sha512-pyejgrb/Db/b3KPGAorOSf+qKBN41xlDpg/a5GX9ujpwfrs+yXJi0NziVGn5WOT3nbMWFyb7gtIRsxqj7sjEXw==}
+  /@iconify-json/mdi/1.1.3:
+    resolution: {integrity: sha512-ABXndnAViaqEcK31lrXeTZp/arE+s8l9J2fCVIrzMrEkD5eYlm33g3sUzvyETCS4skZ5f7B/MiDXJseTJ9hLkA==}
     dependencies:
-      '@iconify/types': 1.0.12
+      '@iconify/types': 1.1.0
     dev: true
 
-  /@iconify/types/1.0.12:
-    resolution: {integrity: sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==}
-    dev: true
-
-  /@iconify/types/1.0.13:
-    resolution: {integrity: sha512-jrJJVPnRM1HsMDnuHRTzMfgiSG6Z1U/2IYI7s8spFu9c7n1q3jcXa+3/YQz4tJVNgAhzm1dbnMxfIAyLDpCaWg==}
+  /@iconify/types/1.1.0:
+    resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
     dev: true
 
   /@iconify/utils/1.0.26:
@@ -514,7 +510,7 @@ packages:
     dependencies:
       '@antfu/install-pkg': 0.1.0
       '@antfu/utils': 0.3.0
-      '@iconify/types': 1.0.13
+      '@iconify/types': 1.1.0
       debug: 4.3.4
       kolorist: 1.5.1
       local-pkg: 0.4.1
@@ -750,7 +746,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.17.2
-      '@types/react': 17.0.41
+      '@types/react': 17.0.42
       '@types/react-dom': 17.0.14
       '@types/react-test-renderer': 17.0.1
       react: 17.0.2
@@ -821,8 +817,8 @@ packages:
       '@types/geojson': 7946.0.8
     dev: true
 
-  /@types/node/17.0.21:
-    resolution: {integrity: sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==}
+  /@types/node/17.0.23:
+    resolution: {integrity: sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==}
     dev: true
 
   /@types/prop-types/15.7.4:
@@ -832,17 +828,17 @@ packages:
   /@types/react-dom/17.0.14:
     resolution: {integrity: sha512-H03xwEP1oXmSfl3iobtmQ/2dHF5aBHr8aUMwyGZya6OW45G+xtdzmq6HkncefiBt5JU8DVyaWl/nWZbjZCnzAQ==}
     dependencies:
-      '@types/react': 17.0.41
+      '@types/react': 17.0.42
     dev: true
 
   /@types/react-test-renderer/17.0.1:
     resolution: {integrity: sha512-3Fi2O6Zzq/f3QR9dRnlnHso9bMl7weKCviFmfF6B4LS1Uat6Hkm15k0ZAQuDz+UBq6B3+g+NM6IT2nr5QgPzCw==}
     dependencies:
-      '@types/react': 17.0.41
+      '@types/react': 17.0.42
     dev: true
 
-  /@types/react/17.0.41:
-    resolution: {integrity: sha512-chYZ9ogWUodyC7VUTRBfblysKLjnohhFY9bGLwvnUFFy48+vB9DikmB3lW0qTFmBcKSzmdglcvkHK71IioOlDA==}
+  /@types/react/17.0.42:
+    resolution: {integrity: sha512-nuab3x3CpJ7VFeNA+3HTUuEkvClYHXqWtWd7Ud6AZYW7Z3NH9WKtgU+tFB0ZLcHq+niB/HnzLcaZPqMJ95+k5Q==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
@@ -2857,8 +2853,8 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /postcss-import/14.0.2_postcss@8.4.12:
-    resolution: {integrity: sha512-BJ2pVK4KhUyMcqjuKs9RijV5tatNzNa73e/32aBVE/ejYPe37iH+6vAu9WvqUkB5OAYgLHzbSvzHnorybJCm9g==}
+  /postcss-import/14.1.0_postcss@8.4.12:
+    resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       postcss: ^8.0.0
@@ -3576,9 +3572,9 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.7.6_c8@7.11.0+jsdom@19.0.0:
-    resolution: {integrity: sha512-fqk0cn0I2BUpzwLfeZ725JeXJ7WGwDtVcVBksQ6SdyjrBi6aex8t3w70TWgyLOXgylS7FJ8C9DRap4MMgpkqYw==}
-    engines: {node: '>=14.14.0'}
+  /vitest/0.7.10_c8@7.11.0+jsdom@19.0.0:
+    resolution: {integrity: sha512-We5a7cnY2aUpX4tAO+w2KRhJiJ4FznfWjYKkqWoAqs4x4pKgyRsMJNZ7OSY/lFHOoRz3yv0mgwfVlZiRc0/mmA==}
+    engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
       '@vitest/ui': '*'

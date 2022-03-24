@@ -3,12 +3,14 @@ import { Credentials, User } from "@domain/user";
 import {
   AUTH_URL,
   JOBS_URL,
+  ORGANIZATION_URL,
   PROFILE_URL,
   REFRESH_URL,
   SERVER_URL,
 } from "@constants/api-urls";
 import { AuthToken, RefreshToken, SigninData, Tokens } from "@services/types";
-import { Job } from "@domain/job";
+import { FullJob, Job, JobUID } from "@domain/job";
+import { Organization } from "@domain/organization";
 
 const server = wretch(SERVER_URL);
 
@@ -28,6 +30,34 @@ export function getUser(token: AuthToken): Promise<User | null> {
   return server.auth(token).url(PROFILE_URL).get().json();
 }
 
-export function getActiveJobs(token: AuthToken): Promise<Job[] | null> {
-  return server.auth(token).url(JOBS_URL).get().json();
+export function getOrganization(
+  token: AuthToken,
+  abortController: AbortController
+): Promise<Organization | null> {
+  return server
+    .signal(abortController)
+    .auth(token)
+    .url(ORGANIZATION_URL)
+    .get()
+    .json();
+}
+
+export function getActiveJobs(
+  token: AuthToken,
+  abortController: AbortController
+): Promise<Job[] | null> {
+  return server.signal(abortController).auth(token).url(JOBS_URL).get().json();
+}
+
+export function getJobInfo(
+  token: AuthToken,
+  jobUid: JobUID,
+  abortController: AbortController
+): Promise<FullJob | null> {
+  return server
+    .signal(abortController)
+    .auth(token)
+    .url(`${JOBS_URL}/${jobUid}`)
+    .get()
+    .json();
 }

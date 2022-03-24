@@ -4,8 +4,8 @@ import { JobDetailsPayload } from "@application/jobs/types";
 
 export const $jobs = app.createStore<Job[]>([]);
 
-export const loadActiveJobs = app.createEvent();
-export const loadActiveJobsFx = app.createEffect<void, Job[]>();
+export const loadActiveJobs = app.createEvent<AbortController>();
+export const loadActiveJobsFx = app.createEffect<AbortController, Job[]>();
 
 export const $selectedJob = app.createStore<SelectedJob>(null);
 

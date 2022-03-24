@@ -9,31 +9,46 @@ import {
   selectJob,
 } from "@application/jobs/index";
 import { forward } from "effector";
-import jobs from "@constants/full-jobs.json";
 import { FullJob, Job } from "@domain/job";
 import { storageAdapter } from "@services/storageAdapter";
 import { TokenType } from "@services/types";
 import { jobsAdapter } from "@services/jobsAdapter";
 import { of } from "await-of";
 
-loadJobDetailsFx.use(({ jobId, signal }): Promise<FullJob> => {
-  const aborted = "Aborted";
-
-  if (signal.aborted) {
-    return Promise.reject(aborted);
+loadJobDetailsFx.use(async ({ jobUID, abortController }): Promise<FullJob> => {
+  if (abortController.signal.aborted) {
+    return Promise.reject("aborted");
   }
 
-  return new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => {
-      // @ts-ignore
-      resolve(jobs[jobId] as FullJob);
-    }, 2_000);
+  const token = await storageAdapter().getToken(TokenType.auth_token);
 
-    signal.onabort = () => {
-      clearTimeout(timeout);
-      reject(aborted);
-    };
+  if (!token) throw "Token missed";
+
+  // TODO: remove
+  await new Promise((resolve) => {
+    setTimeout(resolve, 1_000);
   });
+
+  const [data, err] = await of(
+    jobsAdapter().getJobInfo(token, jobUID, abortController)
+  );
+
+  if (err || !data) {
+    throw "Can't load job info";
+  }
+
+  return data;
+  // return new Promise((resolve, reject) => {
+  //   const timeout = setTimeout(() => {
+  //     // @ts-ignore
+  //     resolve(jobs[jobId] as FullJob);
+  //   }, 2_000);
+  //
+  //   signal.onabort = () => {
+  //     clearTimeout(timeout);
+  //     reject(aborted);
+  //   };
+  // });
 });
 
 forward({
@@ -41,20 +56,28 @@ forward({
   to: loadJobDetailsFx,
 });
 
-loadActiveJobsFx.use(async () => {
+loadActiveJobsFx.use(async (abortController) => {
+  if (abortController.signal.aborted) {
+    return Promise.reject("aborted");
+  }
+
   const token = await storageAdapter().getToken(TokenType.auth_token);
 
   if (!token) throw "Token missed";
 
-  const [data, err] = await of(jobsAdapter().getActiveJobs(token));
-
+  // TODO: remove
   await new Promise((resolve) => {
     setTimeout(resolve, 1_000);
   });
 
+  const [data, err] = await of(
+    jobsAdapter().getActiveJobs(token, abortController)
+  );
+
   if (err || !data) {
     throw "Can't load jobs";
   }
+
   return data;
 });
 
