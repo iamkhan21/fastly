@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useRoute } from "wouter";
 import { animate } from "motion";
-import { loadJobDetails } from "@application/jobs";
 import ComponentLoader from "@ui/components/shared/ComponentLoader";
+import { useLoadJobInfo } from "@ui/hooks/useLoadJobInfo";
 
-const JobDescription = React.lazy(() => import("../JobDescription"));
+const JobDescription = React.lazy(() => import("./JobDescription"));
 
 const SidePanel = () => {
   const isOpen = useRef(false);
   const [match, params] = useRoute("/home/:uid");
+  useLoadJobInfo(params?.uid);
 
   useEffect(() => {
     if (match !== isOpen.current) {
@@ -33,34 +34,26 @@ const SidePanel = () => {
     }
   }, [match]);
 
-  useEffect(() => {
-    const abortController = new AbortController();
-
-    if (params?.uid) {
-      loadJobDetails({ jobUID: +params.uid, abortController });
-    }
-
-    return () => abortController.abort();
-  }, [params?.uid]);
-
   return (
     <aside
       id={"side-panel"}
       className="fixed top-0 right-0 bottom-0 card card--primary card--right max-w-2xl w-full ml-auto z-1 px-4 py-2 will-change-transform translate-x-full"
     >
       <section className={"flex justify-between"}>
-        <p>Job {params?.uid}</p>
+        <h4>Job #{params?.uid}</h4>
         <Link href={"/home"}>
-          <button>close</button>
+          <button className={"btn btn-icon btn-outline"}>
+              <i className="i-mdi-window-close" />
+          </button>
         </Link>
       </section>
 
       <br />
-      {params?.uid && (
-        <React.Suspense fallback={<ComponentLoader />}>
-          <JobDescription />
-        </React.Suspense>
-      )}
+      {/*{params?.uid && (*/}
+      <React.Suspense fallback={<ComponentLoader />}>
+        <JobDescription />
+      </React.Suspense>
+      {/*)}*/}
     </aside>
   );
 };

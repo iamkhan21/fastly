@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import CustomerInfo from "./CustomerInfo";
-import JobInfo from "./JobInfo";
+import CustomerInfo from "../CustomerInfo";
+import JobInfo from "../JobInfo";
 
 interface Props {}
 

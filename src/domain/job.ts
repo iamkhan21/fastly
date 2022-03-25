@@ -34,7 +34,7 @@ export type FullJob = {
   dropOffLocation?: { address: string; name: string };
   vehicle: {
     year: string;
-    vehicleClass: string;
+    vehicleClass: number;
     model: string;
     color: string;
     vin?: string;
@@ -57,7 +57,7 @@ export type SelectedJob = Job | FullJob | null;
 export function getJobNumber(job: SelectedJob): number | null {
   if (!job) return null;
 
-  return job.service?.number;
+  return job.service?.number || null;
 }
 
 export function getCustomerName(job: SelectedJob): string | null {
@@ -80,7 +80,7 @@ export function getTechnicianName(job: SelectedJob): string | null {
 export function getTechnicianPhone(job: SelectedJob): string | null {
   if (!job) return null;
 
-  return (job as FullJob).provider?.phoneNumber || "";
+  return (job as FullJob).provider?.phoneNumber || null;
 }
 
 export function getTechnicianNameAndPhone(job: SelectedJob): string | null {
@@ -124,17 +124,12 @@ export function getVehicleVinNumber(job: SelectedJob): string | null {
   return (job as FullJob).vehicle?.vin || null;
 }
 
-export function getVehicleClass(job: SelectedJob): string | null {
+export function getVehicleClass(job: SelectedJob): number | null {
   if (!job) return null;
-
-  const { vehicleClass } = (job as FullJob).vehicle || {};
-
-  if (!vehicleClass) return null;
-
-  return `${vehicleClass} Duty Vehicle`;
+  return (job as FullJob).vehicle?.vehicleClass || null;
 }
 
-export function getJobTypeId(job: SelectedJob): number | null {
+export function getJobType(job: SelectedJob): number | null {
   if (!job) return null;
 
   return (job as Job).service?.serviceId;
@@ -156,4 +151,89 @@ export function getJobETA(job: SelectedJob): number | null {
   if (!job) return null;
 
   return (job as FullJob).provider?.eta?.duration || null;
+}
+
+enum VehicleClass {
+  Light = 1,
+  Heavy = 2,
+  Motorcycle = 3,
+}
+
+enum VehicleClassName {
+  Light = "Light Duty Vehicle",
+  Heavy = "Heavy Duty Vehicle",
+  Motorcycle = "Motorcycle",
+}
+
+export function convertVehicleClassToHR(
+  vehicleClass: VehicleClass | null
+): VehicleClassName | null {
+  switch (vehicleClass) {
+    case VehicleClass.Light:
+      return VehicleClassName.Light;
+    case VehicleClass.Heavy:
+      return VehicleClassName.Heavy;
+    case VehicleClass.Motorcycle:
+      return VehicleClassName.Motorcycle;
+    default:
+      return null;
+  }
+}
+
+enum JobType {
+  Towing = 2001,
+  JumpStart = 2003,
+  Fuel = 2004,
+  FlatTire = 2005,
+  Winch = 2007,
+  Storage = 2011,
+}
+
+enum JobTypeName {
+  Fuel = "Fuel",
+  Towing = "Towing",
+  JumpStart = "Jump Start",
+  Storage = "Storage",
+  FlatTire = "Flat Tire",
+  Winch = "Winch",
+}
+
+export function convertJobTypeToHR(
+  jobType: JobType | null
+): JobTypeName | null {
+  switch (jobType) {
+    case JobType.Fuel:
+      return JobTypeName.Fuel;
+    case JobType.Towing:
+      return JobTypeName.Towing;
+    case JobType.JumpStart:
+      return JobTypeName.JumpStart;
+    case JobType.Storage:
+      return JobTypeName.Storage;
+    case JobType.FlatTire:
+      return JobTypeName.FlatTire;
+    case JobType.Winch:
+      return JobTypeName.Winch;
+    default:
+      return null;
+  }
+}
+
+enum JobStatus {
+  Completed = 8,
+}
+
+enum JobStatusName {
+  Completed = "Completed By Provider",
+}
+
+export function convertJobStatusToHR(
+  jobStatus: JobStatus | null
+): JobStatusName | null {
+  switch (jobStatus) {
+    case JobStatus.Completed:
+      return JobStatusName.Completed;
+    default:
+      return null;
+  }
 }

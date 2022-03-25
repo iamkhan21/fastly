@@ -10,7 +10,7 @@ interface Props {
 
 const DefaultLoader = () => <span>Loading...</span>;
 const RectangleLoader = () => (
-  <div className={`min-w-xs rounded ${style.rectangle}`} />
+  <span className={`inline-block min-w-xs rounded ${style.rectangle}`} />
 );
 
 const loaders = {

@@ -50,7 +50,7 @@ const Menu = () => {
         className="m-2 mt-auto btn btn-icon btn-outline"
         onClick={toggleMenu}
       >
-        <div className="i-mdi-cog" />
+        <i className="i-mdi-cog" />
       </button>
       <section
         id="menu"
