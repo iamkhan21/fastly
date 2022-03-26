@@ -25,7 +25,7 @@ const JobInfo = () => {
           <h5>
             <InfoLoader loadData={() => convertJobTypeToHR(getJobType(job))} />
           </h5>
-          <span className={"bg-gray-700 rounded px-2 py-0"}>
+          <span className={"bg-gray-700 text-white rounded px-2 py-0"}>
             {convertJobStatusToHR(getJobStatus(job))}
           </span>
         </section>

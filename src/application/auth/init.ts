@@ -1,7 +1,9 @@
 import {
   $auth,
+  $authFail,
   checkAuth,
   checkAuthFx,
+  cleanSigninError,
   logout,
   logoutFx,
   signIn,
@@ -20,10 +22,15 @@ import {
 } from "@services/types";
 
 signinFx.use(async (credentials) => {
+  // TODO: remove
+  await new Promise((resolve) => {
+    setTimeout(resolve, 1_000);
+  });
+
   const [data, err] = await of(authAdapter().signin(credentials));
 
-  if (err || !data) {
-    throw "Can't authenticate";
+  if (err) {
+    throw new Error(err.message);
   }
 
   const { user, ...tokens } = data as SigninData;
@@ -46,7 +53,7 @@ checkAuthFx.use(async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   if (!token) {
-    throw "Token not found";
+    throw new Error("Token not found");
   }
 
   // Request to update tokens
@@ -72,7 +79,7 @@ checkAuthFx.use(async () => {
 
 forward({
   from: signIn,
-  to: signinFx,
+  to: [cleanSigninError, signinFx],
 });
 
 forward({
@@ -88,3 +95,8 @@ forward({
 $auth
   .on([signinFx.doneData, checkAuthFx.doneData], (_, user) => user)
   .on([signinFx.fail, checkAuthFx.fail, logoutFx.done], () => getNoUser());
+
+$authFail
+  .reset(cleanSigninError)
+  .on(signinFx.failData, (_, error) => error.message)
+  .on(signinFx.done, () => null);
