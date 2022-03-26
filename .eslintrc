@@ -4,5 +4,6 @@
     "plugin:effector/recommended",
     "plugin:effector/scope",
     "plugin:effector/react"
-  ]
+  ],
+  "ignorePatterns": ["dprint.json"]
 }
