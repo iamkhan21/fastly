@@ -4,6 +4,8 @@ import Loader from "@ui/components/shared/Loader";
 import { useTitle } from "@ui/hooks/useTitle";
 import { useAppInit } from "@ui/hooks/useAppInit";
 import { useAuthState } from "@ui/hooks/useAuthState";
+import { useRoute } from "wouter";
+import ComponentLoader from "@ui/components/shared/ComponentLoader";
 
 interface Props {
   useAuthHook?: () => UserState;
@@ -11,7 +13,16 @@ interface Props {
   useTitleHook?: (title: string) => void;
 }
 
-const Auth = lazy(() => import("@ui/views/Auth"));
+const AuthView = lazy(() => import("@ui/views/Auth"));
+const PasswordResetView = lazy(() => import("@ui/views/PasswordReset"));
+
+const AuthComponents = () => {
+  const [match] = useRoute("/reset-password");
+
+  if (match) return <PasswordResetView />;
+
+  return <AuthView />;
+};
 
 const AuthGuard: FC<Props> = ({
   children,
@@ -28,8 +39,8 @@ const AuthGuard: FC<Props> = ({
   }
 
   return (
-    <Suspense fallback={<p>loading..</p>}>
-      {user.uid ? children : <Auth />}
+    <Suspense fallback={<ComponentLoader />}>
+      {user.uid ? children : <AuthComponents />}
     </Suspense>
   );
 };

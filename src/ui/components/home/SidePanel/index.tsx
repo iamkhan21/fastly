@@ -43,7 +43,7 @@ const SidePanel = () => {
         <h4>Job #{params?.uid}</h4>
         <Link href={"/home"}>
           <button className={"btn btn-icon btn-outline"}>
-              <i className="i-mdi-window-close" />
+            <i className="i-mdi-window-close" />
           </button>
         </Link>
       </section>

@@ -1,6 +1,7 @@
 import React, { FormEvent } from "react";
 import { signIn, signinFx } from "@application/auth";
 import { useStore } from "effector-react";
+import { Link } from "wouter";
 
 const SigninForm = ({ useStoreHook = useStore }) => {
   const loading = useStoreHook(signinFx.pending);
@@ -17,10 +18,10 @@ const SigninForm = ({ useStoreHook = useStore }) => {
   return (
     <form className="pt-3" onSubmit={onSubmit}>
       <div className={"mb-3"}>
-        <label className={"flex flex-col sm:flex-row sm:items-center gap-1"}>
-          <span className={"sm:basis-25"}>Email</span>
+        <label className={"flex flex-col sm:flex-row sm:items-center gap-2"}>
+          <b className={"sm:basis-25"}>Email</b>
           <input
-            className={"w-full"}
+            className={"w-full input"}
             data-testid="email"
             disabled={loading}
             type="email"
@@ -28,10 +29,10 @@ const SigninForm = ({ useStoreHook = useStore }) => {
         </label>
       </div>
       <div className={"mb-4"}>
-        <label className={"flex flex-col sm:flex-row sm:items-center gap-1"}>
-          <span className={"sm:basis-25"}>Password</span>
+        <label className={"flex flex-col sm:flex-row sm:items-center gap-2"}>
+          <b className={"sm:basis-25"}>Password</b>
           <input
-            className={"w-full"}
+            className={"w-full input"}
             data-testid="password"
             disabled={loading}
             type="password"
@@ -39,9 +40,9 @@ const SigninForm = ({ useStoreHook = useStore }) => {
         </label>
       </div>
       <div className={"flex items-center justify-between"}>
-        <a href="" className={"link"}>
+        <Link href="/reset-password" className={"link"}>
           Forget the password?
-        </a>
+        </Link>
         <button
           className={"btn btn-primary"}
           data-testid="submit"
