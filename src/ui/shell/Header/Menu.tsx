@@ -57,10 +57,12 @@ const Menu = () => {
         className="absolute bottom-10 left-10 card card--primary py-3 px-4 min-w-60 rounded origin-bottom-left will-change-transform"
         style={{ transform: "scale(0)" }}
       >
-        <h4 className="m-0 mb-2">Menu</h4>
-        <nav className={"pb-4 flex flex-col"}>
+        <h4 className="mb-2">Menu</h4>
+        <nav className={"flex flex-col"}>
           <Link href="/organization">Business info</Link>
+          <Link href="/about">About app</Link>
         </nav>
+        <br />
         <button className={"btn btn-danger btn-small"} onClick={() => logout()}>
           Logout
         </button>
