@@ -19,6 +19,14 @@ for (const [configAlias, configPaths = []] of aliases) {
   aliasConfig[wpAlias] = configPaths.map(handlePath);
 }
 
+const buildDate = new Date().toLocaleString("en-GB", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+});
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -45,5 +53,9 @@ export default defineConfig({
     alias: {
       ...aliasConfig,
     },
+  },
+  define: {
+    __BUILD_VERSION__: JSON.stringify(process.env.BUILD_ID || "1.1.1.1"),
+    __BUILD_DATE__: JSON.stringify(buildDate),
   },
 });

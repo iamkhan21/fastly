@@ -15,7 +15,7 @@
     "*": "dprint fmt"
   },
   "simple-git-hooks": {
-    "pre-commit": "npm version minor && npx nano-staged"
+    "pre-commit": "npx nano-staged"
   },
   "dependencies": {
     "await-of": "3.1.1",

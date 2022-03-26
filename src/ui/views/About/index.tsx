@@ -1,10 +1,10 @@
 import React from "react";
-import pkg from "../../../../package.json";
 
 const About = () => {
   return (
     <article className="content">
-      <h6>App version: {pkg.version}</h6>
+      <h6>Build version: {__BUILD_VERSION__}</h6>
+      <p>Uploaded at {__BUILD_DATE__}</p>
     </article>
   );
 };
