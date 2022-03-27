@@ -1,4 +1,5 @@
-import { Token, User } from "@domain/user";
+import { Token } from "@lib/types";
+import { User } from "@domain/user";
 
 export type AuthToken = Token;
 export type RefreshToken = Token;

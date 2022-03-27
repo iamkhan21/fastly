@@ -1,8 +1,7 @@
-export type Email = string;
-export type Password = string;
-export type UID = string;
-export type Token = string;
-export type UserName = string;
+import { OrganizationUID } from "@domain/organization";
+import { Email, Password, UID, UserName } from "@lib/types";
+
+export type UserUid = UID;
 
 export enum Roles {
   Admin = 20001,
@@ -10,10 +9,11 @@ export enum Roles {
 }
 
 export type User = {
-  uid: UID;
+  uid: UserUid;
   email: Email;
   name: UserName;
   role: Roles;
+  organization: OrganizationUID;
 };
 
 export type NoUser = { uid: null };
@@ -27,6 +27,8 @@ export function getNoUser() {
   return { uid: null };
 }
 
-export function checkIsUserAdmin(user: User): boolean {
+export function checkIsUserAdmin(user: User | NoUser | null): boolean {
+  if (!user?.uid) return false;
+
   return user.role === Roles.Admin;
 }

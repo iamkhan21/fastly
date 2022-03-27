@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { logout } from "@application/auth";
 import { animate } from "motion";
 import { Link } from "wouter";
+import style from "./style.module.pcss";
 
 const Menu = () => {
   const state = useRef(false);
@@ -59,8 +60,12 @@ const Menu = () => {
       >
         <h4 className="mb-2">Menu</h4>
         <nav className="flex flex-col">
-          <Link href="/organization">Business info</Link>
-          <Link href="/about">About app</Link>
+          <Link className={style.menulink} href="/organization">
+            Business info
+          </Link>
+          <Link className={style.menulink} href="/about">
+            About app
+          </Link>
         </nav>
         <br />
         <button className="btn btn-danger btn-small" onClick={() => logout()}>

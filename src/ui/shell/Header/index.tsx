@@ -2,6 +2,8 @@ import React, { FC } from "react";
 import { Link, useLocation } from "wouter";
 import Menu from "@ui/shell/Header/Menu";
 import style from "./style.module.pcss";
+import { useAuthState } from "@ui/hooks/useAuthState";
+import { checkIsUserAdmin } from "@domain/user";
 
 interface Props {
   href: string;
@@ -22,6 +24,10 @@ const ActiveLink: FC<Props> = ({ children, title, ...props }) => {
 };
 
 const Header = () => {
+  const auth = useAuthState();
+
+  const isAdmin = checkIsUserAdmin(auth);
+
   return (
     <header
       className="relative card card--left w-12 flex flex-col items-stretch z-5"
@@ -36,9 +42,11 @@ const Header = () => {
         <ActiveLink href="/users" title="Fleet assets">
           <i className={`${style.icon} icon i-mdi-badge-account`} />
         </ActiveLink>
-        <ActiveLink href="/finance" title="Job payments">
-          <i className={`${style.icon} icon i-mdi-wallet`} />
-        </ActiveLink>
+        {isAdmin && (
+          <ActiveLink href="/finance" title="Job payments">
+            <i className={`${style.icon} icon i-mdi-wallet`} />
+          </ActiveLink>
+        )}
       </nav>
 
       <Menu />

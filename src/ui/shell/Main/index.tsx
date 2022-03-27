@@ -6,6 +6,7 @@ const Home = React.lazy(() => import("@ui/views/Home"));
 const Users = React.lazy(() => import("@ui/views/Users"));
 const Finance = React.lazy(() => import("@ui/views/Finance"));
 const About = React.lazy(() => import("@ui/views/About"));
+const Organization = React.lazy(() => import("@ui/views/Organization"));
 const NotFound = React.lazy(() => import("@ui/views/NotFound"));
 
 const Main = () => {
@@ -20,6 +21,7 @@ const Main = () => {
           <Route path="/users" component={Users} />
           <Route path="/finance" component={Finance} />
           <Route path="/about" component={About} />
+          <Route path="/organization" component={Organization} />
           <Route component={NotFound} />
         </Switch>
       </React.Suspense>
