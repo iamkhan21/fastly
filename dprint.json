@@ -9,6 +9,6 @@
     "printWidth": 80
   },
   "plugins": [
-    "https://plugins.dprint.dev/prettier-0.5.1.exe-plugin@3b0f36f27222453e24a25786969e687a3bcef29f3df00c9d7246cba9f85956d3"
+    "https://plugins.dprint.dev/prettier-0.6.0.exe-plugin@6cf9f835c092475f1a2ec04dc53bc890545c2afd1ea3d2a9b2eb7dd5027e1118"
   ]
 }

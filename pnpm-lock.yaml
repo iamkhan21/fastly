@@ -16,7 +16,7 @@ specifiers:
   autoprefixer: 10.4.4
   await-of: 3.1.1
   c8: 7.11.0
-  dprint: 0.23.1
+  dprint: 0.24.0
   effector: 22.2.0
   effector-react: 22.0.6
   eslint: 8.12.0
@@ -40,7 +40,7 @@ specifiers:
   typescript: 4.6.3
   unocss: 0.30.6
   vite: 2.8.6
-  vitest: 0.7.11
+  vitest: 0.7.12
   wouter: 2.8.0-alpha.2
   wretch: 1.7.9
 
@@ -71,7 +71,7 @@ devDependencies:
   "@vitejs/plugin-react": 1.2.0
   autoprefixer: 10.4.4_postcss@8.4.12
   c8: 7.11.0
-  dprint: 0.23.1
+  dprint: 0.24.0
   eslint: 8.12.0
   eslint-plugin-effector: 0.6.0_effector@22.2.0+eslint@8.12.0
   jsdom: 19.0.0
@@ -88,7 +88,7 @@ devDependencies:
   typescript: 4.6.3
   unocss: 0.30.6
   vite: 2.8.6
-  vitest: 0.7.11_c8@7.11.0+jsdom@19.0.0
+  vitest: 0.7.12_c8@7.11.0+jsdom@19.0.0
 
 packages:
   /@ampproject/remapping/2.1.2:
@@ -2027,10 +2027,10 @@ packages:
       webidl-conversions: 7.0.0
     dev: true
 
-  /dprint/0.23.1:
+  /dprint/0.24.0:
     resolution:
       {
-        integrity: sha512-+OSpbqg/1Bqcrr4KNegF+9kwGDb2wjGY2xa6L9n2kAiqluNJnZ2drxUCAjiBL5TepfFPVN30FhmilNmjrwXdUg==,
+        integrity: sha512-PQlbBWAmc5GPJ7qv8qtOS6+Xr+Ns4w7To9lkvnMETq0ySW/+KnXlZBguqUG2Bl/VZoLqbKikQKrkzxy0VSxY/A==,
       }
     hasBin: true
     requiresBuild: true
@@ -4910,10 +4910,10 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.7.11_c8@7.11.0+jsdom@19.0.0:
+  /vitest/0.7.12_c8@7.11.0+jsdom@19.0.0:
     resolution:
       {
-        integrity: sha512-xCEUBCpqiIVhUFIMCKKXDZ/bcPLk2EhPmTFA9qw+Kf+B2d/gm3ZBdUAMa3jIZNZ/d3esji5H6XZPNAk//9K4Kw==,
+        integrity: sha512-Q/UrBAhStPUeic++s+jnH6M0vsBhemTixAsAKvp6z8zN6K47tfZqob4XgpbViebDmYcmhlyREumVmrpUlyuXdA==,
       }
     engines: { node: ">=v14.16.0" }
     hasBin: true
