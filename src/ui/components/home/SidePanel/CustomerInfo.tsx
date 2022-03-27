@@ -11,6 +11,7 @@ import InfoLoader from "@ui/components/home/SidePanel/InfoLoader";
 import { useStore } from "effector-react";
 import { $selectedJob } from "@application/jobs";
 import InfoSection from "@ui/components/home/SidePanel/InfoSection";
+import { formatPhoneNumberToHR } from "@lib/utils/formatters/phone-formatter";
 
 const CustomerInfo = () => {
   const job = useStore($selectedJob);
@@ -20,23 +21,25 @@ const CustomerInfo = () => {
       <h4 className="mb-1">Customer</h4>
       <section className="border rounded p-2 space-y-2">
         <InfoSection
-          icon={"i-mdi-card-account-details-outline"}
+          icon="i-mdi-card-account-details-outline"
           content={
-            <section className={"min-h-65px"}>
+            <section className="min-h-65px">
               <p className="mb-0.5">
                 <InfoLoader loadData={() => getCustomerName(job)} />
               </p>
               <p>
-                <InfoLoader loadData={() => getCustomerPhone(job)} />
+                <InfoLoader
+                  loadData={() => formatPhoneNumberToHR(getCustomerPhone(job))}
+                />
               </p>
             </section>
           }
         />
 
         <InfoSection
-          icon={"i-mdi-car"}
+          icon="i-mdi-car"
           content={
-            <section className={"min-h-95px"}>
+            <section className="min-h-95px">
               <p className="mb-0.5">
                 <InfoLoader loadData={() => getVehicle(job)} />
               </p>

@@ -36,13 +36,13 @@ const SidePanel = () => {
 
   return (
     <aside
-      id={"side-panel"}
+      id="side-panel"
       className="fixed top-0 right-0 bottom-0 card card--primary card--right max-w-2xl w-full ml-auto z-1 px-4 py-2 will-change-transform translate-x-full"
     >
-      <section className={"flex justify-between"}>
+      <section className="flex justify-between">
         <h4>Job #{params?.uid}</h4>
-        <Link href={"/home"}>
-          <button className={"btn btn-icon btn-outline"}>
+        <Link href="/home">
+          <button className="btn btn-icon btn-outline">
             <i className="i-mdi-window-close" />
           </button>
         </Link>

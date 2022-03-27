@@ -58,12 +58,12 @@ const Menu = () => {
         style={{ transform: "scale(0)" }}
       >
         <h4 className="mb-2">Menu</h4>
-        <nav className={"flex flex-col"}>
+        <nav className="flex flex-col">
           <Link href="/organization">Business info</Link>
           <Link href="/about">About app</Link>
         </nav>
         <br />
-        <button className={"btn btn-danger btn-small"} onClick={() => logout()}>
+        <button className="btn btn-danger btn-small" onClick={() => logout()}>
           Logout
         </button>
       </section>

@@ -7,7 +7,7 @@ type Props = {
 
 const InfoSection: FC<Props> = React.memo(({ icon, content }) => (
   <section className="flex items-center space-x-2">
-    <figure className={"px-2"}>
+    <figure className="px-2">
       <i className={`icon ${icon} text-3xl`} />
     </figure>
     {content}

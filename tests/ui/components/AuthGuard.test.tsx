@@ -6,14 +6,14 @@ import { getNoUser } from "@domain/user";
 import { waitFor } from "@testing-library/react";
 
 describe("withAuthentication", () => {
-  const App = () => <p data-testid={"test"}>Test</p>;
+  const App = () => <p data-testid="test">Test</p>;
 
   const getLoader = () => screen.queryByTestId("loader");
   const getTest = () => screen.queryByTestId("test");
   const getAuth = () => screen.queryByTestId("auth");
 
   const useGateMock = function () {};
-  const useTitleMock = function (title: string) {};
+  const useTitleMock = function (_: string) {};
   const renderFunc = (useAuthMock: () => UserState) =>
     render(
       <AuthGuard

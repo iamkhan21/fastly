@@ -29,7 +29,7 @@ export type FullJob = {
     serviceId: number;
     status: number;
   };
-  personalInfo: { phone: string; name: string; phoneCode: number };
+  personalInfo: { phone: string; name: string };
   location: { address: string };
   dropOffLocation?: { address: string; name: string };
   vehicle: {
@@ -48,7 +48,6 @@ export type FullJob = {
     name: string;
   };
   unreadMessageCount: number;
-  countryCode: number;
   errors: {};
 };
 
@@ -111,11 +110,7 @@ export function getVehicle(job: SelectedJob): string | null {
 export function getCustomerPhone(job: SelectedJob): string | null {
   if (!job) return null;
 
-  const { phone = "", phoneCode = "" } = (job as FullJob).personalInfo || {};
-
-  if (!phone || !phoneCode) return null;
-
-  return `+${phoneCode} ${phone}`;
+  return (job as FullJob).personalInfo?.phone || null;
 }
 
 export function getVehicleVinNumber(job: SelectedJob): string | null {
@@ -151,6 +146,12 @@ export function getJobETA(job: SelectedJob): number | null {
   if (!job) return null;
 
   return (job as FullJob).provider?.eta?.duration || null;
+}
+
+export function getJobETAToHR(eta: number | null): string | null {
+  if (!eta) return null;
+
+  return `${eta} minutes`;
 }
 
 enum VehicleClass {

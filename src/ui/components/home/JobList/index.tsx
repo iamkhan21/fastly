@@ -28,7 +28,7 @@ const JobList = ({ useStoreHook = useStore }) => {
     <aside className="content z-1 min-w-sm">
       <h4>Dispatches</h4>
       <br />
-      <form onSubmit={searchJobCase} className={"flex items-center"}>
+      <form onSubmit={searchJobCase} className="flex items-center">
         <input
           type="search"
           aria-label="Search job case"
