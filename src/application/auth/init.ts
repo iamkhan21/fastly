@@ -20,6 +20,7 @@ import {
   SigninData,
   TokenType,
 } from "@services/types";
+import { resetJob, resetJobs } from "@application/jobs";
 
 signinFx.use(async (credentials) => {
   // TODO: remove
@@ -84,7 +85,7 @@ forward({
 
 forward({
   from: logout,
-  to: logoutFx,
+  to: [logoutFx, resetJobs, resetJob],
 });
 
 forward({

@@ -21,6 +21,7 @@ export function getMockedUser(role = Roles.Dispatcher): User {
     uid: "e9bf0e74-7858-4c47-ae6d-232ac90d5b15",
     email: "schaefer@hotmail.com",
     name: "Fernando Schaefer",
+    organization: "1232312312",
     role,
   };
 }

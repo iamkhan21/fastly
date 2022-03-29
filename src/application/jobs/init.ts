@@ -6,6 +6,7 @@ import {
   loadJobDetails,
   loadJobDetailsFx,
   resetJob,
+  resetJobs,
   selectJob,
 } from "@application/jobs/index";
 import { forward } from "effector";
@@ -91,7 +92,7 @@ const newJobSelected = selectJob.filter({
     ($selectedJob.getState() as Job)?.service?.number !== job?.service?.number,
 });
 
-$jobs.on([loadActiveJobsFx.doneData], (_, jobs) => jobs);
+$jobs.reset(resetJobs).on([loadActiveJobsFx.doneData], (_, jobs) => jobs);
 
 $selectedJob
   .reset(resetJob)
