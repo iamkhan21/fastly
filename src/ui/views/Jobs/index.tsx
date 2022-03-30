@@ -1,13 +1,14 @@
 import React from "react";
 import Table from "@ui/components/shared/Table";
 
-const Finance = () => {
+const Jobs = () => {
   return (
     <article className="content">
-      <h2>Finance</h2>
+      <h2>Jobs management</h2>
+
       <Table />
     </article>
   );
 };
 
-export default Finance;
+export default Jobs;

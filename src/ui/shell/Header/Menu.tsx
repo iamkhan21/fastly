@@ -63,6 +63,9 @@ const Menu = () => {
           <Link className={style.menulink} href="/organization">
             Business info
           </Link>
+          <Link className={style.menulink} href="/faqs">
+            FAQs
+          </Link>
           <Link className={style.menulink} href="/about">
             About app
           </Link>

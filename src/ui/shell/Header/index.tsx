@@ -39,7 +39,10 @@ const Header = () => {
         <ActiveLink href="/home" title="Dispatches">
           <i className={`${style.icon} icon i-mdi-headset`} />
         </ActiveLink>
-        <ActiveLink href="/users" title="Fleet assets">
+        <ActiveLink href="/jobs" title="Jobs management">
+          <i className={`${style.icon} icon i-mdi-file-document-multiple`} />
+        </ActiveLink>
+        <ActiveLink href="/fleet" title="Fleet management">
           <i className={`${style.icon} icon i-mdi-badge-account`} />
         </ActiveLink>
         {isAdmin && (
