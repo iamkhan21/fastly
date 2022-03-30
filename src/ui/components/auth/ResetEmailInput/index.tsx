@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@mui/material/Button";
 
 const ResetEmailInput = () => {
   return (
@@ -11,7 +12,7 @@ const ResetEmailInput = () => {
       </div>
 
       <div className="flex justify-end">
-        <button className="btn btn-primary">Send reset link</button>
+        <Button variant="contained">Send reset link</Button>
       </div>
     </form>
   );

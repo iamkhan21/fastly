@@ -3,6 +3,7 @@ import JobCard from "@ui/components/home/JobCard";
 import { useStore } from "effector-react";
 import { $jobs, loadActiveJobs, loadActiveJobsFx } from "@application/jobs";
 import { getJobNumber } from "@domain/job";
+import Button from "@mui/material/Button";
 
 const JobList = ({ useStoreHook = useStore }) => {
   const loading = useStoreHook(loadActiveJobsFx.pending);
@@ -37,9 +38,10 @@ const JobList = ({ useStoreHook = useStore }) => {
           className="mr-2 p-2 rounded"
           required
         />
-        <button type="submit" className="btn btn-small btn-icon">
+        <Button variant="contained" type="submit">
+          search
           <i className="block i-mdi-magnify text-base" />
-        </button>
+        </Button>
       </form>
       <br />
       <section className="space-y-3 max-h-80vh">

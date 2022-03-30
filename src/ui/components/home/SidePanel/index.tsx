@@ -3,6 +3,7 @@ import { Link, useRoute } from "wouter";
 import { animate } from "motion";
 import ComponentLoader from "@ui/components/shared/ComponentLoader";
 import { useLoadJobInfo } from "@ui/hooks/useLoadJobInfo";
+import Button from "@mui/material/Button";
 
 const JobDescription = React.lazy(() => import("./JobDescription"));
 
@@ -42,9 +43,10 @@ const SidePanel = () => {
       <section className="flex justify-between">
         <h4>Job #{params?.uid}</h4>
         <Link href="/home">
-          <button className="btn btn-icon btn-outline">
+          <Button variant="outlined">
+            X
             <i className="i-mdi-window-close" />
-          </button>
+          </Button>
         </Link>
       </section>
 

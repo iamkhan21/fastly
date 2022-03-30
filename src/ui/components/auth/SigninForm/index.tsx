@@ -3,6 +3,8 @@ import { $authFail, signIn, signinFx } from "@application/auth";
 import { useStore } from "effector-react";
 import { Link } from "wouter";
 import { animate } from "motion";
+import Button from "@mui/material/Button";
+import { TextField } from "@mui/material";
 
 const SigninForm = ({ useStoreHook = useStore }) => {
   const loading = useStoreHook(signinFx.pending);
@@ -11,8 +13,8 @@ const SigninForm = ({ useStoreHook = useStore }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function onInput(e: FormEvent<HTMLInputElement>) {
-    const { name, value } = e.currentTarget;
+  function onInput(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
 
     switch (name) {
       case "email": {
@@ -47,34 +49,32 @@ const SigninForm = ({ useStoreHook = useStore }) => {
   return (
     <form className="pt-3" onSubmit={onSubmit} autoComplete="off">
       <div className="mb-3">
-        <label className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <b className="sm:basis-25">Email</b>
-          <input
-            name="email"
-            className="w-full input"
-            data-testid="email"
-            disabled={loading}
-            onChange={onInput}
-            value={email}
-            type="email"
-            required
-          />
-        </label>
+        <TextField
+          label="Email"
+          variant="standard"
+          fullWidth
+          name="email"
+          data-testid="email"
+          disabled={loading}
+          onChange={onInput}
+          value={email}
+          type="email"
+          required
+        />
       </div>
       <div className="mb-4">
-        <label className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <b className="sm:basis-25">Password</b>
-          <input
-            name="password"
-            className="w-full input"
-            data-testid="password"
-            disabled={loading}
-            onChange={onInput}
-            value={password}
-            type="password"
-            required
-          />
-        </label>
+        <TextField
+          label="Password"
+          variant="standard"
+          fullWidth
+          name="password"
+          data-testid="password"
+          disabled={loading}
+          onInput={onInput}
+          value={password}
+          type="password"
+          required
+        />
       </div>
       <p id="error" className="text-red-500 h-6">
         <small>{error}</small>
@@ -83,14 +83,14 @@ const SigninForm = ({ useStoreHook = useStore }) => {
         <Link href="/reset-password" className="link">
           Forget the password?
         </Link>
-        <button
-          className="btn btn-primary"
+        <Button
+          variant="contained"
           data-testid="submit"
           disabled={loading || disabled}
           type="submit"
         >
           {loading ? "Trying to sign in.." : "Sign In"}
-        </button>
+        </Button>
       </div>
     </form>
   );

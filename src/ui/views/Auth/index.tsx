@@ -1,5 +1,6 @@
 import React from "react";
 import SigninForm from "@ui/components/auth/SigninForm";
+import Card from "@mui/material/Card";
 
 const Auth = () => {
   return (
@@ -7,10 +8,10 @@ const Auth = () => {
       className="content flex items-center justify-center w-screen"
       data-testid="auth"
     >
-      <section className="card w-full max-w-lg p-5 rounded">
+      <Card className="w-full max-w-md p-5">
         <h3 data-testid="title">Signin</h3>
         <SigninForm />
-      </section>
+      </Card>
     </article>
   );
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@mui/material/Button";
 
 const NewPasswordInput = () => {
   return (
@@ -17,7 +18,7 @@ const NewPasswordInput = () => {
       </div>
 
       <div className="flex justify-end">
-        <button className="btn btn-primary">Save new password</button>
+        <Button variant="contained">Save new password</Button>
       </div>
     </form>
   );

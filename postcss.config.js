@@ -1,5 +1,5 @@
-const postcssJitProps = require("postcss-jit-props");
-const OpenProps = require("open-props");
+// const postcssJitProps = require("postcss-jit-props");
+// const OpenProps = require("open-props");
 
 module.exports = {
   plugins: [
@@ -8,6 +8,6 @@ module.exports = {
     require("postcss-nested"),
     require("postcss-preset-env"),
     require("autoprefixer"),
-    postcssJitProps(OpenProps),
+    // postcssJitProps(OpenProps),
   ],
 };

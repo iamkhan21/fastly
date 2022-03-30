@@ -3,6 +3,7 @@ import { logout } from "@application/auth";
 import { animate } from "motion";
 import { Link } from "wouter";
 import style from "./style.module.pcss";
+import Button from "@mui/material/Button";
 
 const Menu = () => {
   const state = useRef(false);
@@ -45,14 +46,16 @@ const Menu = () => {
 
   return (
     <>
-      <button
+      <Button
         id="menu-btn"
         type="button"
-        className="m-2 mt-auto btn btn-icon btn-outline"
+        className="m-2 mt-auto"
         onClick={toggleMenu}
+        variant="outlined"
       >
+        jhfgh
         <i className="i-mdi-cog" />
-      </button>
+      </Button>
       <section
         id="menu"
         className="absolute bottom-10 left-10 card card--primary py-3 px-4 min-w-60 rounded origin-bottom-left will-change-transform"
@@ -71,9 +74,9 @@ const Menu = () => {
           </Link>
         </nav>
         <br />
-        <button className="btn btn-danger btn-small" onClick={() => logout()}>
+        <Button variant="contained" onClick={() => logout()}>
           Logout
-        </button>
+        </Button>
       </section>
     </>
   );
