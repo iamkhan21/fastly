@@ -5,7 +5,6 @@ const Jobs = () => {
   return (
     <article className="content">
       <h2>Jobs management</h2>
-
       <Table />
     </article>
   );

@@ -1,11 +1,13 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
-import path from "node:path";
 import react from "@vitejs/plugin-react";
 import Unocss from "unocss/vite";
 import { presetUno } from "unocss";
 import presetIcons from "@unocss/preset-icons";
+// @ts-ignore
 import tsconfig from "./tsconfig.json";
+// @ts-ignore
+import path from "node:path";
 
 function handlePath(p) {
   return path.resolve(__dirname, p).replace(/([\\/])\*$/, "");
@@ -16,7 +18,7 @@ const aliasConfig = {};
 
 for (const [configAlias, configPaths = []] of aliases) {
   const wpAlias = configAlias.replace(/([\\/])\*$/, "");
-  aliasConfig[wpAlias] = configPaths.map(handlePath);
+  aliasConfig[wpAlias] = (configPaths as string[]).map(handlePath);
 }
 
 const buildDate = new Date().toLocaleString("en-GB", {

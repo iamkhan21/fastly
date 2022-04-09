@@ -9,7 +9,7 @@ specifiers:
   "@testing-library/user-event": 14.0.4
   "@types/mapbox-gl": 2.6.3
   "@types/node": 17.0.23
-  "@types/react": 18.0.0
+  "@types/react": 18.0.1
   "@types/react-dom": 18.0.0
   "@unocss/preset-icons": 0.30.12
   "@vitejs/plugin-react": 1.3.0
@@ -40,7 +40,7 @@ specifiers:
   typescript: 4.6.3
   unocss: 0.30.12
   vite: 2.9.1
-  vitest: 0.8.0
+  vitest: 0.9.2
   wouter: 2.8.0-alpha.2
   wretch: 1.7.9
 
@@ -65,7 +65,7 @@ devDependencies:
   "@testing-library/user-event": 14.0.4_@testing-library+dom@8.13.0
   "@types/mapbox-gl": 2.6.3
   "@types/node": 17.0.23
-  "@types/react": 18.0.0
+  "@types/react": 18.0.1
   "@types/react-dom": 18.0.0
   "@unocss/preset-icons": 0.30.12
   "@vitejs/plugin-react": 1.3.0
@@ -88,7 +88,7 @@ devDependencies:
   typescript: 4.6.3
   unocss: 0.30.12
   vite: 2.9.1
-  vitest: 0.8.0_c8@7.11.0+jsdom@19.0.0
+  vitest: 0.9.2_c8@7.11.0+jsdom@19.0.0
 
 packages:
   /@ampproject/remapping/2.1.2:
@@ -960,7 +960,7 @@ packages:
         optional: true
     dependencies:
       "@babel/runtime": 7.17.2
-      "@types/react": 18.0.0
+      "@types/react": 18.0.1
       "@types/react-dom": 18.0.0
       "@types/react-test-renderer": 17.0.1
       react: 18.0.0
@@ -1081,7 +1081,7 @@ packages:
         integrity: sha512-49897Y0UiCGmxZqpC8Blrf6meL8QUla6eb+BBhn69dTXlmuOlzkfr7HHY/O8J25e1lTUMs+YYxSlVDAaGHCOLg==,
       }
     dependencies:
-      "@types/react": 18.0.0
+      "@types/react": 18.0.1
     dev: true
 
   /@types/react-test-renderer/17.0.1:
@@ -1090,13 +1090,13 @@ packages:
         integrity: sha512-3Fi2O6Zzq/f3QR9dRnlnHso9bMl7weKCviFmfF6B4LS1Uat6Hkm15k0ZAQuDz+UBq6B3+g+NM6IT2nr5QgPzCw==,
       }
     dependencies:
-      "@types/react": 18.0.0
+      "@types/react": 18.0.1
     dev: true
 
-  /@types/react/18.0.0:
+  /@types/react/18.0.1:
     resolution:
       {
-        integrity: sha512-7+K7zEQYu7NzOwQGLR91KwWXXDzmTFODRVizJyIALf6RfLv2GDpqpknX64pvRVILXCpXi7O/pua8NGk44dLvJw==,
+        integrity: sha512-VnWlrVgG0dYt+NqlfMI0yUYb8Rdl4XUROyH+c6gq/iFCiZ805Vi//26UW38DHnxQkbDhnrIWTBiy6oKZqL11cw==,
       }
     dependencies:
       "@types/prop-types": 15.7.5
@@ -4686,10 +4686,10 @@ packages:
       }
     dev: false
 
-  /tinyspy/0.3.0:
+  /tinyspy/0.3.2:
     resolution:
       {
-        integrity: sha512-c5uFHqtUp74R2DJE3/Efg0mH5xicmgziaQXMm/LvuuZn3RdpADH32aEGDRyCzObXT1DNfwDMqRQ/Drh1MlO12g==,
+        integrity: sha512-2+40EP4D3sFYy42UkgkFFB+kiX2Tg3URG/lVvAZFfLxgGpnWl5qQJuBw1gaLttq8UOS+2p3C0WrhJnQigLTT2Q==,
       }
     engines: { node: ">=14.0.0" }
     dev: true
@@ -4891,12 +4891,12 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.8.0_c8@7.11.0+jsdom@19.0.0:
+  /vitest/0.9.2_c8@7.11.0+jsdom@19.0.0:
     resolution:
       {
-        integrity: sha512-8m8OufAQWXlNpjm5dTe5Lc60zruguKJljunveueYrd4aoeXaQvggLX0SPmIW3G6PDtnBdNEynSi+6pibjnutQA==,
+        integrity: sha512-XgR42njw350OxBfKD4MK0cNIzgQrhSUKJq9sgbgRR+bD8GonPCyjpFFmPejptaiEyjmQ2FXpEvFHN37b9X2HJA==,
       }
-    engines: { node: ">=v14.19.1" }
+    engines: { node: ">=v14.16.0" }
     hasBin: true
     peerDependencies:
       "@vitest/ui": "*"
@@ -4920,7 +4920,7 @@ packages:
       jsdom: 19.0.0
       local-pkg: 0.4.1
       tinypool: 0.1.2
-      tinyspy: 0.3.0
+      tinyspy: 0.3.2
       vite: 2.9.1
     transitivePeerDependencies:
       - less
