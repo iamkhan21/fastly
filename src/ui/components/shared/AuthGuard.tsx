@@ -1,4 +1,4 @@
-import React, { FC, lazy, Suspense } from "react";
+import React, { FC, lazy, ReactNode, Suspense } from "react";
 import { UserState } from "@application/auth/types";
 import Loader from "@ui/components/shared/Loader";
 import { useTitle } from "@ui/hooks/useTitle";
@@ -8,6 +8,7 @@ import { useRoute } from "wouter";
 import ComponentLoader from "@ui/components/shared/ComponentLoader";
 
 interface Props {
+  children: ReactNode;
   useAuthHook?: () => UserState;
   useGateHook?: () => void;
   useTitleHook?: (title: string) => void;

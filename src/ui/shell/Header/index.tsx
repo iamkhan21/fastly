@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import { Link, useLocation } from "wouter";
 import Menu from "@ui/shell/Header/Menu";
 import style from "./style.module.pcss";
@@ -6,11 +6,12 @@ import { useAuthState } from "@ui/hooks/useAuthState";
 import { checkIsUserAdmin } from "@domain/user";
 
 interface Props {
+  children: ReactNode;
   href: string;
   title?: string;
 }
 
-const ActiveLink: FC<Props> = ({ children, title, ...props }) => {
+const ActiveLink: FC<Props> = ({ title, children, ...props }) => {
   const [location] = useLocation();
 
   const active = location.includes(props.href) ? style.active : "";
@@ -30,7 +31,7 @@ const Header = () => {
 
   return (
     <header
-      className="relative card card--left w-12 flex flex-col items-stretch z-5"
+      className="fixed inset-y-0 card card--left w-12 flex flex-col items-stretch z-5"
       data-testid="header"
     >
       <h2 className="m-0 mb-5 text-center">F</h2>
