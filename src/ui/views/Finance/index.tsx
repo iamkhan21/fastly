@@ -4,6 +4,7 @@ const Finance = () => {
   return (
     <article className="content">
       <h2>Finance</h2>
+      <br />
       <table className="table">
         <thead className="table-head">
           <tr>
