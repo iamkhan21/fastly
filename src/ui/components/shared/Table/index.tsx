@@ -1,43 +1,31 @@
 import React from "react";
-
+import "./style.pcss";
 const Table = () => {
   return (
     <table>
-      <tr>
-        <td>&nbsp;</td>
-        <td>Knocky</td>
-        <td>Flor</td>
-        <td>Ella</td>
-        <td>Juan</td>
-      </tr>
-      <tr>
-        <td>Breed</td>
-        <td>Jack Russell</td>
-        <td>Poodle</td>
-        <td>Streetdog</td>
-        <td>Cocker Spaniel</td>
-      </tr>
-      <tr>
-        <td>Age</td>
-        <td>16</td>
-        <td>9</td>
-        <td>10</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>Owner</td>
-        <td>Mother-in-law</td>
-        <td>Me</td>
-        <td>Me</td>
-        <td>Sister-in-law</td>
-      </tr>
-      <tr>
-        <td>Eating Habits</td>
-        <td>Eats everyone's leftovers</td>
-        <td>Nibbles at food</td>
-        <td>Hearty eater</td>
-        <td>Will eat till he explodes</td>
-      </tr>
+      <caption>2019 Fourth Quarter Report</caption>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>October</th>
+          <th>November</th>
+          <th>December</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Urgently</th>
+          <td className="number-cell">$820,180</td>
+          <td className="number-cell">$841,640</td>
+          <td className="number-cell">$111,270</td>
+        </tr>
+        <tr>
+          <th>Fastly</th>
+          <td className="number-cell">$850,730</td>
+          <td className="number-cell">$892,580</td>
+          <td className="number-cell">$801,240</td>
+        </tr>
+      </tbody>
     </table>
   );
 };
