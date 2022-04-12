@@ -1,6 +1,6 @@
-import Header from "@ui/shell/Header";
-import Main from "@ui/shell/Main";
-import AuthGuard from "@ui/components/shared/AuthGuard";
+import Header from "@shell/Header";
+import Main from "@shell/Main";
+import AuthGuard from "@components/shared/AuthGuard";
 
 function App() {
   return (

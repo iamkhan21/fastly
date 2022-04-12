@@ -1,18 +1,15 @@
 import React, { lazy } from "react";
-import ComponentLoader from "@ui/components/shared/ComponentLoader";
+import ComponentLoader from "@components/shared/ComponentLoader";
 
-const ResetEmailInput = lazy(
-  () => import("@ui/components/auth/ResetEmailInput")
-);
+const ResetEmailInput = lazy(() => import("@components/auth/ResetEmailInput"));
 const NewPasswordInput = lazy(
-  () => import("@ui/components/auth/NewPasswordInput")
+  () => import("@components/auth/NewPasswordInput")
 );
 
 const PasswordReset = () => {
   const params = new URLSearchParams(window.location.search);
   const token = params.get("token");
 
-  console.log(token);
   return (
     <article className="content flex items-center justify-center w-screen">
       <section className="card w-full max-w-lg p-5 rounded">

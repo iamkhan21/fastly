@@ -1,8 +1,8 @@
 import React, { FC, ReactNode } from "react";
 import { Link, useLocation } from "wouter";
-import Menu from "@ui/shell/Header/Menu";
+import Menu from "@shell/Header/Menu";
 import style from "./style.module.pcss";
-import { useAuthState } from "@ui/hooks/useAuthState";
+import { useAuthState } from "@hooks/useAuthState";
 import { checkIsUserAdmin } from "@domain/user";
 
 interface Props {
