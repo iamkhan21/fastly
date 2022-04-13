@@ -53,7 +53,7 @@ const FAQ = () => {
             <p>Creating Drivers / Signing In App</p>
           </details>
           <details>
-            <summary>Urgently Technician App</summary>
+            <summary>Fastly Technician App</summary>
             <p>Overview</p>
             <p>Job Stacking</p>
             <p>Sending Logs</p>
