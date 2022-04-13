@@ -1,7 +1,7 @@
 import React from "react";
 import { useStore } from "effector-react";
 import { $selectedJob } from "@application/jobs";
-import InfoLoader from "@ui/components/home/SidePanel/InfoLoader";
+import InfoLoader from "@components/home/SidePanel/InfoLoader";
 import {
   convertJobStatusToHR,
   convertJobTypeToHR,
@@ -14,7 +14,7 @@ import {
   getTechnicianName,
   getTechnicianPhone,
 } from "@domain/job";
-import InfoSection from "@ui/components/home/SidePanel/InfoSection";
+import InfoSection from "@components/home/SidePanel/InfoSection";
 import { formatPhoneNumberToHR } from "@lib/utils/formatters/phone-formatter";
 
 const JobInfo = () => {

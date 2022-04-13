@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { getMockedUser, render, screen } from "@tests/utils/test-utils";
-import AuthGuard from "@ui/components/shared/AuthGuard";
+import AuthGuard from "@components/shared/AuthGuard";
 import { UserState } from "@application/auth/types";
 import { getNoUser } from "@domain/user";
 import { waitFor } from "@testing-library/react";

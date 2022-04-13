@@ -1,7 +1,7 @@
 import React from "react";
-import SidePanel from "@ui/components/home/SidePanel";
-import BackgroundMap from "@ui/components/home/BackgroundMap";
-import JobList from "@ui/components/home/JobList";
+import SidePanel from "@components/home/SidePanel";
+import BackgroundMap from "@components/home/BackgroundMap";
+import JobList from "@components/home/JobList";
 
 const Home = () => {
   return (

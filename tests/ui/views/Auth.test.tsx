@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import { render, screen } from "@tests/utils/test-utils";
-import Auth from "@ui/views/Auth";
+import Auth from "@views/Auth";
 
 describe("Auth view", () => {
   const getTitle = () => screen.queryByTestId("title");

@@ -7,10 +7,10 @@ import {
   getVehicleClass,
   getVehicleVinNumber,
 } from "@domain/job";
-import InfoLoader from "@ui/components/home/SidePanel/InfoLoader";
+import InfoLoader from "@components/home/SidePanel/InfoLoader";
 import { useStore } from "effector-react";
 import { $selectedJob } from "@application/jobs";
-import InfoSection from "@ui/components/home/SidePanel/InfoSection";
+import InfoSection from "@components/home/SidePanel/InfoSection";
 import { formatPhoneNumberToHR } from "@lib/utils/formatters/phone-formatter";
 
 const CustomerInfo = () => {

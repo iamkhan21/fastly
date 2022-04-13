@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import {
   getCustomerName,
   getJobLocation,
@@ -15,8 +15,12 @@ interface Props {
 }
 
 const JobCard: FC<Props> = ({ job }) => {
+  function openJobDetails() {
+    selectJob(job);
+  }
+
   return (
-    <Link onClick={() => selectJob(job)} href={`/home/${getJobNumber(job)}`}>
+    <Link href={`/home/${getJobNumber(job)}`} onClick={openJobDetails}>
       <section className="card card--primary border rounded p-2 cursor-pointer">
         <h6>{getCustomerName(job)}</h6>
         <p>{getVehicle(job)}</p>

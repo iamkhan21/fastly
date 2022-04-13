@@ -1,15 +1,15 @@
 import React from "react";
 import { Redirect, Route, Switch } from "wouter";
-import ComponentLoader from "@ui/components/shared/ComponentLoader";
+import ComponentLoader from "@components/shared/ComponentLoader";
 
-const Home = React.lazy(() => import("@ui/views/Home"));
-const Users = React.lazy(() => import("@ui/views/Fleet"));
-const Finance = React.lazy(() => import("@ui/views/Finance"));
-const About = React.lazy(() => import("@ui/views/About"));
-const Organization = React.lazy(() => import("@ui/views/Organization"));
-const Jobs = React.lazy(() => import("@ui/views/Jobs"));
-const FAQs = React.lazy(() => import("@ui/views/FAQ"));
-const NotFound = React.lazy(() => import("@ui/views/NotFound"));
+const Home = React.lazy(() => import("@views/Home"));
+const Users = React.lazy(() => import("@views/Fleet"));
+const Finance = React.lazy(() => import("@views/Finance"));
+const About = React.lazy(() => import("@views/About"));
+const Organization = React.lazy(() => import("@views/Organization"));
+const Jobs = React.lazy(() => import("@views/Jobs"));
+const FAQs = React.lazy(() => import("@views/FAQ"));
+const NotFound = React.lazy(() => import("@views/NotFound"));
 
 const Main = () => {
   return (

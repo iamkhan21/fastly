@@ -1,11 +1,11 @@
 import React, { FC, lazy, ReactNode, Suspense } from "react";
 import { UserState } from "@application/auth/types";
-import Loader from "@ui/components/shared/Loader";
-import { useTitle } from "@ui/hooks/useTitle";
-import { useAppInit } from "@ui/hooks/useAppInit";
-import { useAuthState } from "@ui/hooks/useAuthState";
+import Loader from "@components/shared/Loader";
+import { useTitle } from "@hooks/useTitle";
+import { useAppInit } from "@hooks/useAppInit";
+import { useAuthState } from "@hooks/useAuthState";
 import { useRoute } from "wouter";
-import ComponentLoader from "@ui/components/shared/ComponentLoader";
+import ComponentLoader from "@components/shared/ComponentLoader";
 
 interface Props {
   children: ReactNode;
@@ -14,8 +14,8 @@ interface Props {
   useTitleHook?: (title: string) => void;
 }
 
-const AuthView = lazy(() => import("@ui/views/Auth"));
-const PasswordResetView = lazy(() => import("@ui/views/PasswordReset"));
+const AuthView = lazy(() => import("@views/Auth"));
+const PasswordResetView = lazy(() => import("@views/PasswordReset"));
 
 const AuthComponents = () => {
   const [match] = useRoute("/reset-password");

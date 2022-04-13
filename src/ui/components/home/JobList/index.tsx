@@ -1,5 +1,5 @@
 import React, { FormEvent, useEffect } from "react";
-import JobCard from "@ui/components/home/JobCard";
+import JobCard from "@components/home/JobCard";
 import { useStore } from "effector-react";
 import { $jobs, loadActiveJobs, loadActiveJobsFx } from "@application/jobs";
 import { getJobNumber } from "@domain/job";

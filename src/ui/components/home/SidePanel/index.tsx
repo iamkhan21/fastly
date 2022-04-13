@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useRoute } from "wouter";
 import { animate } from "motion";
-import ComponentLoader from "@ui/components/shared/ComponentLoader";
-import { useLoadJobInfo } from "@ui/hooks/useLoadJobInfo";
+import ComponentLoader from "@components/shared/ComponentLoader";
+import { useLoadJobInfo } from "@hooks/useLoadJobInfo";
 
 const JobDescription = React.lazy(() => import("./JobDescription"));
 

@@ -6,12 +6,14 @@ const ResetEmailInput = () => {
       <div className="mb-3">
         <label className="flex flex-col sm:flex-row sm:items-center gap-2">
           <b className="sm:basis-15">Email</b>
-          <input className="w-full input" data-testid="password" type="email" />
+          <input className="w-full input" data-testid="email" type="email" />
         </label>
       </div>
 
       <div className="flex justify-end">
-        <button className="btn btn-primary">Send reset link</button>
+        <button data-testid="submit" type="submit" className="btn btn-primary">
+          Send reset link
+        </button>
       </div>
     </form>
   );
