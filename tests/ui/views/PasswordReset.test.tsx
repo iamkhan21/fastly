@@ -1,7 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import { render, screen } from "@tests/utils/test-utils";
 import PasswordReset from "@views/PasswordReset";
-import { act } from "react-dom/test-utils";
 import { waitFor } from "@testing-library/react";
 
 describe("PasswordReset view", () => {
@@ -11,19 +10,36 @@ describe("PasswordReset view", () => {
   const getRepeatPasswordInput = () => screen.queryByTestId("password2");
   const getSubmitButton = () => screen.queryByTestId("submit");
 
-  beforeEach(() => {
+  beforeEach(() => {});
+
+  it("should render password reset form if token absent", async () => {
     render(<PasswordReset />);
-  });
 
-  it("should render password reset form if token absent", async () => {
     expect(getTitle()).toHaveTextContent("Password Reset");
   });
 
   it("should render password reset form if token absent", async () => {
+    Object.defineProperty(window, "location", {
+      value: {
+        search: {
+          token: "333",
+        },
+      },
+    });
+
+    render(<PasswordReset />);
+
     expect(getTitle()).toHaveTextContent("Password Reset");
+    await waitFor(() => expect(getPasswordInput()).toBeInTheDocument());
+    expect(getRepeatPasswordInput()).toBeInTheDocument();
+
+    // @ts-ignore
+    delete window.location.search["token"];
   });
 
   it("should render password reset form", async () => {
+    render(<PasswordReset />);
+
     await waitFor(() => expect(getEmailInput()).toBeInTheDocument());
     expect(getSubmitButton()).toBeInTheDocument();
   });
