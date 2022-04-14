@@ -18,6 +18,7 @@
     "pre-commit": "npx nano-staged"
   },
   "dependencies": {
+    "@hookform/resolvers": "2.8.8",
     "await-of": "3.1.1",
     "effector": "22.2.0",
     "effector-react": "22.0.6",
@@ -26,8 +27,10 @@
     "motion": "10.7.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-hook-form": "7.29.0",
     "wouter": "2.8.0-alpha.2",
-    "wretch": "1.7.9"
+    "wretch": "1.7.9",
+    "zod": "3.14.4"
   },
   "devDependencies": {
     "@iconify-json/mdi": "1.1.9",

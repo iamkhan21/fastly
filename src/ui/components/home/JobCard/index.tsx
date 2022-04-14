@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import {
   getCustomerName,
   getJobLocation,

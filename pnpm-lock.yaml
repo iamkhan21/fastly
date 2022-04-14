@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  "@hookform/resolvers": 2.8.8
   "@iconify-json/mdi": 1.1.9
   "@testing-library/dom": 8.13.0
   "@testing-library/jest-dom": 5.16.4
@@ -36,6 +37,7 @@ specifiers:
   prettier: 2.6.2
   react: 18.0.0
   react-dom: 18.0.0
+  react-hook-form: 7.29.0
   simple-git-hooks: 2.7.0
   typescript: 4.6.3
   unocss: 0.31.3
@@ -43,8 +45,10 @@ specifiers:
   vitest: 0.9.3
   wouter: 2.8.0-alpha.2
   wretch: 1.7.9
+  zod: 3.14.4
 
 dependencies:
+  "@hookform/resolvers": 2.8.8_react-hook-form@7.29.0
   await-of: 3.1.1
   effector: 22.2.0
   effector-react: 22.0.6_effector@22.2.0+react@18.0.0
@@ -53,8 +57,10 @@ dependencies:
   motion: 10.7.1_react-dom@18.0.0+react@18.0.0
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
+  react-hook-form: 7.29.0_react@18.0.0
   wouter: 2.8.0-alpha.2_react@18.0.0
   wretch: 1.7.9
+  zod: 3.14.4
 
 devDependencies:
   "@iconify-json/mdi": 1.1.9
@@ -595,6 +601,17 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@hookform/resolvers/2.8.8_react-hook-form@7.29.0:
+    resolution:
+      {
+        integrity: sha512-meAEDur1IJBfKyTo9yPYAuzjIfrxA7m9Ov+1nxaW/YupsqMeseWifoUjWK03+hz/RJizsVQAaUjVxFEkyu0GWg==,
+      }
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.29.0_react@18.0.0
+    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution:
@@ -4264,6 +4281,18 @@ packages:
       react: 18.0.0
     dev: true
 
+  /react-hook-form/7.29.0_react@18.0.0:
+    resolution:
+      {
+        integrity: sha512-NcJqWRF6el5HMW30fqZRt27s+lorvlCCDbTpAyHoodQeYWXgQCvZJJQLC1kRMKdrJknVH0NIg3At6TUzlZJFOQ==,
+      }
+    engines: { node: ">=12.22.0" }
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.0.0
+    dev: false
+
   /react-is/17.0.2:
     resolution:
       {
@@ -5104,3 +5133,10 @@ packages:
       }
     engines: { node: ">=10" }
     dev: true
+
+  /zod/3.14.4:
+    resolution:
+      {
+        integrity: sha512-U9BFLb2GO34Sfo9IUYp0w3wJLlmcyGoMd75qU9yf+DrdGA4kEx6e+l9KOkAlyUO0PSQzZCa3TR4qVlcmwqSDuw==,
+      }
+    dev: false
