@@ -7,7 +7,6 @@ describe("PasswordReset view", () => {
   const getTitle = () => screen.queryByTestId("title");
   const getEmailInput = () => screen.queryByTestId("email");
   const getPasswordInput = () => screen.queryByTestId("password");
-  const getRepeatPasswordInput = () => screen.queryByTestId("password2");
 
   it("should render password reset form", async () => {
     render(<PasswordReset />);
@@ -33,7 +32,6 @@ describe("PasswordReset view", () => {
     render(<PasswordReset />);
 
     await waitFor(() => expect(getPasswordInput()).toBeInTheDocument());
-    expect(getRepeatPasswordInput()).toBeInTheDocument();
 
     // @ts-ignore
     delete window.location.search["token"];
