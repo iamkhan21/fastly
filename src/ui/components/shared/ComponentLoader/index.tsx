@@ -10,7 +10,7 @@ const ComponentLoader = () => {
     };
   }, []);
 
-  return showMsg ? <p>Component loading...</p> : null;
+  return showMsg ? <p className="px-2">Component loading...</p> : null;
 };
 
 export default ComponentLoader;

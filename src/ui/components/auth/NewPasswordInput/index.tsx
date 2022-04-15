@@ -7,7 +7,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 interface Props {
-  useStoreHook?: () => boolean | string;
+  usePendingHook?: () => boolean;
+  useErrorHook?: () => string | null;
 }
 
 interface FormInputs {
@@ -18,9 +19,21 @@ const schema = z.object({
   password: z.string().refine(checkStringNotEmpty),
 });
 
-const NewPasswordInput: FC<Props> = ({ useStoreHook = useStore }) => {
-  const isLoading = useStoreHook(signinFx.pending) as boolean;
-  const error = useStoreHook($authFail) as string;
+function useNewPasswordPending(): boolean {
+  return useStore(signinFx.pending);
+}
+
+function useNewPasswordError(): string | null {
+  return useStore($authFail);
+}
+
+const NewPasswordInput: FC<Props> = ({
+  // TODO: Replace new password effect
+  usePendingHook = useNewPasswordPending,
+  useErrorHook = useNewPasswordError,
+}) => {
+  const isLoading = usePendingHook();
+  const error = useErrorHook();
 
   const {
     register,

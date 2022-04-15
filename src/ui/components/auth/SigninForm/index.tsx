@@ -9,7 +9,8 @@ import { z } from "zod";
 import { checkStringNotEmpty } from "@lib/validators";
 
 interface Props {
-  useStoreHook?: () => boolean | string;
+  usePendingHook?: () => boolean;
+  useErrorHook?: () => string | null;
 }
 
 interface FormInputs {
@@ -22,9 +23,20 @@ const schema = z.object({
   password: z.string().refine(checkStringNotEmpty),
 });
 
-const SigninForm: FC<Props> = ({ useStoreHook = useStore }) => {
-  const isLoading = useStoreHook(signinFx.pending) as boolean;
-  const error = useStoreHook($authFail) as string;
+function useSigninPending(): boolean {
+  return useStore(signinFx.pending);
+}
+
+function useSigninError(): string | null {
+  return useStore($authFail);
+}
+
+const SigninForm: FC<Props> = ({
+  usePendingHook = useSigninPending,
+  useErrorHook = useSigninError,
+}) => {
+  const isLoading = usePendingHook();
+  const error = useErrorHook();
 
   const {
     register,

@@ -6,7 +6,8 @@ import { $authFail, signinFx } from "@application/auth";
 import { useStore } from "effector-react";
 
 interface Props {
-  useStoreHook?: () => boolean | string;
+  usePendingHook?: () => boolean;
+  useErrorHook?: () => string | null;
 }
 
 interface FormInputs {
@@ -17,10 +18,21 @@ const schema = z.object({
   email: z.string().email(),
 });
 
-const ResetEmailInput: FC<Props> = ({ useStoreHook = useStore }) => {
+function useResetPending(): boolean {
+  return useStore(signinFx.pending);
+}
+
+function useResetError(): string | null {
+  return useStore($authFail);
+}
+
+const ResetEmailInput: FC<Props> = ({
   // TODO: Replace reset password effect
-  const isLoading = useStoreHook(signinFx.pending) as boolean;
-  const error = useStoreHook($authFail) as string;
+  usePendingHook = useResetPending,
+  useErrorHook = useResetError,
+}) => {
+  const isLoading = usePendingHook();
+  const error = useErrorHook();
 
   const {
     register,
@@ -33,9 +45,11 @@ const ResetEmailInput: FC<Props> = ({ useStoreHook = useStore }) => {
   });
 
   const onSubmit = (data: FormInputs) => {
-    console.log(data);
     // TODO: Call password reset event
+    console.log(data);
   };
+
+  const errorMsg = errors.email?.message || error;
 
   return (
     <form className="pt-3" onSubmit={handleSubmit(onSubmit)} autoComplete="off">
@@ -51,9 +65,9 @@ const ResetEmailInput: FC<Props> = ({ useStoreHook = useStore }) => {
             {...register("email")}
           />
         </label>
-        {errors.email && (
+        {errorMsg && (
           <span className="text-red-500" data-testid="error-msg">
-            {errors.email?.message}
+            {errorMsg}
           </span>
         )}
       </div>

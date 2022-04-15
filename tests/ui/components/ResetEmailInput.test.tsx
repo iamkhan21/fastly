@@ -49,9 +49,18 @@ describe("ResetEmailInput", () => {
   });
 
   it("should disable button and input when reset effect is pending", async () => {
-    render(<ResetEmailInput useStoreHook={() => true} />);
+    render(<ResetEmailInput usePendingHook={() => true} />);
 
     expect(getEmailInput()).toBeDisabled();
     expect(getSubmitButton()).toBeDisabled();
+  });
+
+  it("should show error from password reset event", async () => {
+    const errorMsg = "error";
+    render(<ResetEmailInput useErrorHook={() => errorMsg} />);
+
+    const errorSection = getErrorSection();
+    expect(errorSection).toBeInTheDocument();
+    expect(errorSection).toHaveTextContent(errorMsg);
   });
 });
