@@ -5,7 +5,7 @@ specifiers:
   "@iconify-json/mdi": 1.1.9
   "@testing-library/dom": 8.13.0
   "@testing-library/jest-dom": 5.16.4
-  "@testing-library/react": 13.0.1
+  "@testing-library/react": 13.1.0
   "@testing-library/react-hooks": 8.0.0
   "@testing-library/user-event": 14.1.0
   "@types/mapbox-gl": 2.7.0
@@ -66,7 +66,7 @@ devDependencies:
   "@iconify-json/mdi": 1.1.9
   "@testing-library/dom": 8.13.0
   "@testing-library/jest-dom": 5.16.4
-  "@testing-library/react": 13.0.1_react-dom@18.0.0+react@18.0.0
+  "@testing-library/react": 13.1.0_react-dom@18.0.0+react@18.0.0
   "@testing-library/react-hooks": 8.0.0_4ba69c7787dfd9a3579e23e97d93e7b4
   "@testing-library/user-event": 14.1.0_@testing-library+dom@8.13.0
   "@types/mapbox-gl": 2.7.0
@@ -976,10 +976,10 @@ packages:
       react-error-boundary: 3.1.4_react@18.0.0
     dev: true
 
-  /@testing-library/react/13.0.1_react-dom@18.0.0+react@18.0.0:
+  /@testing-library/react/13.1.0_react-dom@18.0.0+react@18.0.0:
     resolution:
       {
-        integrity: sha512-zeHx3PohYYp+4bTJwrixQY8zSBZjWUGwYc7OhD1EpWTHS92RleApLoP72NdwaWxOrM1P1Uezt3XvGf6t2XSWPQ==,
+        integrity: sha512-neStnDZdhkvZNNmPhhhi8+BXg3YCvjNmd8yGdr44VLVcFUDPForwokJWpDRCh3DvuX/M37Pt94fLwkM7aNut/A==,
       }
     engines: { node: ">=12" }
     peerDependencies:
