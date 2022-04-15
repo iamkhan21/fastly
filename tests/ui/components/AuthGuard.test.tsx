@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { getMockedUser, render, screen } from "@tests/utils/test-utils";
+import { render, screen } from "@tests/utils/test-utils";
 import AuthGuard from "@components/shared/AuthGuard";
 import { UserState } from "@application/auth/types";
 import { getNoUser } from "@domain/user";
 import { waitFor } from "@testing-library/react";
+import { getMockedUser } from "@tests/mocks/users";
 
 describe("withAuthentication", () => {
   const App = () => <p data-testid="test">Test</p>;

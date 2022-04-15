@@ -1,36 +1,55 @@
-import React, { FormEvent, useEffect, useState } from "react";
+import React, { FC, useEffect } from "react";
 import { $authFail, signIn, signinFx } from "@application/auth";
 import { useStore } from "effector-react";
 import { Link } from "wouter";
 import { animate } from "motion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { checkStringNotEmpty } from "@lib/validators";
 
-const SigninForm = ({ useStoreHook = useStore }) => {
-  const loading = useStoreHook(signinFx.pending);
-  const error = useStoreHook($authFail);
+interface Props {
+  usePendingHook?: () => boolean;
+  useErrorHook?: () => string | null;
+}
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+interface FormInputs {
+  email: string;
+  password: string;
+}
 
-  function onInput(e: FormEvent<HTMLInputElement>) {
-    const { name, value } = e.currentTarget;
+const schema = z.object({
+  email: z.string().email(),
+  password: z.string().refine(checkStringNotEmpty),
+});
 
-    switch (name) {
-      case "email": {
-        return setEmail(value);
-      }
-      case "password": {
-        return setPassword(value);
-      }
-    }
-  }
+function useSigninPending(): boolean {
+  return useStore(signinFx.pending);
+}
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+function useSigninError(): string | null {
+  return useStore($authFail);
+}
 
-    signIn({
-      email: email.trim(),
-      password: password.trim(),
-    });
+const SigninForm: FC<Props> = ({
+  usePendingHook = useSigninPending,
+  useErrorHook = useSigninError,
+}) => {
+  const isLoading = usePendingHook();
+  const error = useErrorHook();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { isValid },
+  } = useForm<FormInputs>({
+    mode: "onChange",
+    delayError: 750,
+    resolver: zodResolver(schema),
+  });
+
+  function onSubmit(data: FormInputs) {
+    signIn(data);
   }
 
   useEffect(() => {
@@ -43,21 +62,18 @@ const SigninForm = ({ useStoreHook = useStore }) => {
     }
   }, [error]);
 
-  const disabled = !email.trim() || !password.trim();
   return (
-    <form className="pt-3" onSubmit={onSubmit} autoComplete="off">
+    <form className="pt-3" onSubmit={handleSubmit(onSubmit)} autoComplete="off">
       <div className="mb-3">
         <label className="flex flex-col sm:flex-row sm:items-center gap-2">
           <b className="sm:basis-25">Email</b>
           <input
-            name="email"
             className="w-full input"
             data-testid="email"
-            disabled={loading}
-            onChange={onInput}
-            value={email}
+            disabled={isLoading}
             type="email"
             required
+            {...register("email")}
           />
         </label>
       </div>
@@ -65,14 +81,12 @@ const SigninForm = ({ useStoreHook = useStore }) => {
         <label className="flex flex-col sm:flex-row sm:items-center gap-2">
           <b className="sm:basis-25">Password</b>
           <input
-            name="password"
             className="w-full input"
             data-testid="password"
-            disabled={loading}
-            onChange={onInput}
-            value={password}
+            disabled={isLoading}
             type="password"
             required
+            {...register("password")}
           />
         </label>
       </div>
@@ -86,10 +100,10 @@ const SigninForm = ({ useStoreHook = useStore }) => {
         <button
           className="btn btn-primary"
           data-testid="submit"
-          disabled={loading || disabled}
+          disabled={isLoading || !isValid}
           type="submit"
         >
-          {loading ? "Trying to sign in.." : "Sign In"}
+          {isLoading ? "Trying to sign in.." : "Sign In"}
         </button>
       </div>
     </form>

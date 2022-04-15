@@ -12,7 +12,7 @@ const PasswordReset = () => {
 
   return (
     <article className="content flex items-center justify-center w-screen">
-      <section className="card w-full max-w-lg p-5 rounded">
+      <section className="card min-h-45 w-full max-w-lg p-5 rounded">
         <h3 data-testid="title">Password Reset</h3>
         <React.Suspense fallback={<ComponentLoader />}>
           {token ? <NewPasswordInput /> : <ResetEmailInput />}

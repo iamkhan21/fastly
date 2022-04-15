@@ -11,12 +11,13 @@ import {
   signinFx,
 } from "@application/auth";
 import "@application/init";
-import { getMockedUser } from "@tests/utils/test-utils";
+import { getMockedUser } from "@tests/mocks/users";
 import { getNoUser } from "@domain/user";
 
 function mockSuccessAuth() {
   return getMockedUser();
 }
+
 function mockFailAuth() {
   throw "Can't load user";
 }
