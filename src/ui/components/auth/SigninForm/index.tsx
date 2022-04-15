@@ -44,6 +44,7 @@ const SigninForm: FC<Props> = ({
     formState: { isValid },
   } = useForm<FormInputs>({
     mode: "onChange",
+    delayError: 750,
     resolver: zodResolver(schema),
   });
 

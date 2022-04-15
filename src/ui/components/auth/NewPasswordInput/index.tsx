@@ -38,15 +38,18 @@ const NewPasswordInput: FC<Props> = ({
   const {
     register,
     handleSubmit,
-    formState: { isValid },
+    formState: { errors, isValid },
   } = useForm<FormInputs>({
     mode: "onChange",
+    delayError: 750,
     resolver: zodResolver(schema),
   });
 
   function onSubmit(data: FormInputs) {
     console.log(data);
   }
+
+  const errorMsg = errors.password?.message || error;
 
   return (
     <form className="pt-3" onSubmit={handleSubmit(onSubmit)} autoComplete="off">
@@ -62,6 +65,11 @@ const NewPasswordInput: FC<Props> = ({
             {...register("password")}
           />
         </label>
+        {errorMsg && (
+          <span className="text-red-500" data-testid="error-msg">
+            {errorMsg}
+          </span>
+        )}
       </div>
 
       <div className="flex justify-end">
